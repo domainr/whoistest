@@ -11,14 +11,19 @@ import (
 	"regexp"
 	"runtime"
 	"strings"
+	"sync"
+
 	"code.google.com/p/go.net/idna"
+	whois "github.com/domainr/go-whois"
 )
 
 var (
-	v, quick    bool
-	concurrency int
-	zones       []string
-	prefixes    []string
+	v, quick      bool
+	concurrency   int
+	zones         []string
+	prefixes      []string
+	_, FILE, _, _ = runtime.Caller(0)
+	DIR           = filepath.Dir(FILE)
 )
 
 func init() {
@@ -49,28 +54,39 @@ func main1() error {
 
 	// Quick for debugging?
 	if quick {
+		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
 		zones = zones[0:50]
 	}
 
-	// fmt.Println(strings.Join(zones, "\n"))
-	// fmt.Println("\n\n-------------------\n\n")
-	// fmt.Println(strings.Join(prefixes, "\n"))
-
 	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
+	var mutex sync.Mutex
 
 	fmt.Fprintf(os.Stderr, "Querying whois for %d prefixes and %d zones\n", len(prefixes), len(zones))
 
-	// Create 1 goroutine for each zone
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
-			go func(prefix, zone string) {
+			domain := fmt.Sprintf("%s.%s", prefix, zone)
+			fmt.Printf("%s\n", domain)
+			// FIXME: this SHOULD run under a goroutine, but it currently behaves incorrectly
+			// go func(domain string) {
+			func(domain string) {
 				limiter <- struct{}{} // acquire semaphore
 				defer func() {        // release semaphore
 					<-limiter
 				}()
 
-				fmt.Printf("%s.%s\n", prefix, zone)
-			}(prefix, zone)
+				req, err := whois.Resolve(domain)
+				if err != nil {
+					return
+				}
+
+				mutex.Lock()
+				err = os.MkdirAll(filepath.Join(DIR, "data", req.Host), os.ModePerm)
+				mutex.Unlock()
+				if err != nil {
+					return
+				}
+			}(domain)
 		}
 	}
 
@@ -81,8 +97,7 @@ var re = regexp.MustCompile("\\s+|#.+$")
 
 func readLines(fn string) (out []string, err error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
-	_, file, _, _ := runtime.Caller(0)
-	buf, err := ioutil.ReadFile(filepath.Join(filepath.Dir(file), "data", fn))
+	buf, err := ioutil.ReadFile(filepath.Join(DIR, "data", fn))
 	if err != nil {
 		return
 	}
