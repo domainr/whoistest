@@ -75,7 +75,7 @@ func main1() error {
 		}
 	}
 
-	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones)\n", len(domains), len(prefixes), len(zones))
+	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones + extras)\n", len(domains), len(prefixes), len(zones))
 
 	responses := make(chan *whois.Response, len(domains))
 	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
