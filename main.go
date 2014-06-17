@@ -68,7 +68,7 @@ func main1() error {
 			req, err := whois.Resolve(domain)
 			if err == nil {
 				hostParent := re.ReplaceAllLiteralString(req.Host, "")
-				if _, ok := domains[hostParent]; !ok {
+				if _, ok := domains[hostParent]; !ok && hostParent != "" {
 					fmt.Fprintf(os.Stderr, "  + %s\n", hostParent)
 					domains[hostParent] = true
 				}
