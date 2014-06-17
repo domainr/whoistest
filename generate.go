@@ -14,7 +14,7 @@ import (
 	"sync"
 
 	"code.google.com/p/go.net/idna"
-	whois "github.com/domainr/go-whois"
+	"github.com/domainr/go-whois/whois"
 )
 
 var (
