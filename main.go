@@ -57,6 +57,8 @@ func main1() error {
 		zones = []string{"com", "net", "org", "co", "io", "nr"}
 	}
 
+	re := regexp.MustCompile(`^[^\.]+\.`)
+
 	domains := make(map[string]bool, len(zones)*len(prefixes))
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
@@ -64,7 +66,11 @@ func main1() error {
 			domains[domain] = true
 			req, err := whois.Resolve(domain)
 			if err == nil {
-				domains[req.Host] = true
+				hostParent := re.ReplaceAllLiteralString(req.Host, "")
+				if _, ok := domains[hostParent]; !ok {
+					fmt.Fprintf(os.Stderr, "  + %s\n", hostParent)
+					domains[hostParent] = true
+				}
 			}
 		}
 	}
@@ -124,7 +130,7 @@ func main1() error {
 	return nil
 }
 
-var re = regexp.MustCompile(`\s+|#.+$`)
+var whitespaceAndComments = regexp.MustCompile(`\s+|#.+$`)
 
 func readLines(fn string) (out []string, err error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
@@ -135,7 +141,7 @@ func readLines(fn string) (out []string, err error) {
 	defer f.Close()
 	s := bufio.NewScanner(f)
 	for s.Scan() {
-		line := re.ReplaceAllLiteralString(s.Text(), "")
+		line := whitespaceAndComments.ReplaceAllLiteralString(s.Text(), "")
 		if line != "" {
 			line, _ = idna.ToASCII(line)
 			out = append(out, line)
