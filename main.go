@@ -30,7 +30,7 @@ var (
 func init() {
 	flag.BoolVar(&v, "v", false, "verbose output (to stderr)")
 	flag.BoolVar(&quick, "quick", false, "Only work on a subset of zones")
-	flag.IntVar(&concurrency, "concurrency", 8, "Set maximum number of concurrent requests")
+	flag.IntVar(&concurrency, "concurrency", 32, "Set maximum number of concurrent requests")
 }
 
 func main() {
@@ -57,6 +57,7 @@ func main1() error {
 	if quick {
 		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
 		zones = []string{"com", "net", "org", "co", "io", "nr"}
+		concurrency = 4 // Don’t slam the .org whois server
 	}
 
 	re := regexp.MustCompile(`^[^\.]+\.`)
