@@ -135,22 +135,26 @@ func main1() error {
 
 var whitespaceAndComments = regexp.MustCompile(`\s+|#.+$`)
 
-func readLines(fn string) (out []string, err error) {
+func readLines(fn string) ([]string, error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
 	f, err := os.Open(filepath.Join(DIR, "data", fn))
 	if err != nil {
-		return
+		return nil, err
 	}
 	defer f.Close()
+
+	var out []string
 	s := bufio.NewScanner(f)
 	for s.Scan() {
 		line := whitespaceAndComments.ReplaceAllLiteralString(s.Text(), "")
-		if line != "" {
-			line, _ = idna.ToASCII(line)
+		if line == "" {
+			continue
+		}
+		if line, ierr := idna.ToASCII(line); ierr == nil {
 			out = append(out, line)
 		}
 	}
-	return
+	return out, s.Err()
 }
 
 func sha1hex(buf []byte) string {
