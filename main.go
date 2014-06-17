@@ -2,13 +2,15 @@ package main
 
 import (
 	"bufio"
+	"crypto/sha1"
+	"encoding/base32"
 	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
 	"regexp"
 	"runtime"
-	"sync"
+	"strings"
 
 	"code.google.com/p/go.net/idna"
 	"github.com/domainr/go-whois/whois"
@@ -69,15 +71,16 @@ func main1() error {
 
 	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones)\n", len(domains), len(prefixes), len(zones))
 
+	responses := make(chan *whois.Response, len(domains))
 	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
-	var wg sync.WaitGroup
 	for domain, _ := range domains {
-		wg.Add(1)
 		go func(domain string) {
+			var res *whois.Response
+
 			limiter <- struct{}{} // acquire semaphore
 			defer func() {        // release semaphore
+				responses <- res
 				<-limiter
-				wg.Done()
 			}()
 
 			req, err := whois.Resolve(domain)
@@ -85,32 +88,39 @@ func main1() error {
 				return
 			}
 
-			res, err := req.Fetch()
+			res, err = req.Fetch()
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error fetching whois for %s: %s\n", req.Query, err)
 				return
 			}
-
-			dir := filepath.Join(DIR, "data", "responses", req.Host)
-			err = os.MkdirAll(dir, os.ModePerm)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", req.Host, err)
-				return
-			}
-
-			fn := filepath.Join(dir, req.Query+".mime")
-			f, err := os.Create(fn)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", req.Query, err)
-				return
-			}
-			defer f.Close()
-			
-			res.WriteMIME(f)
 		}(domain)
 	}
-	wg.Wait()
 
+	// Collect from goroutines
+	for i := 0; i < len(domains); i++ {
+		select {
+		case res := <-responses:
+			if res == nil {
+				continue
+			}
+
+			dir := filepath.Join(DIR, "data", "responses", res.Host)
+			err = os.MkdirAll(dir, os.ModePerm)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", res.Host, err)
+				continue
+			}
+
+			fn := filepath.Join(dir, (sha1base32(res.Body) + ".mime"))
+			f, err := os.Create(fn)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
+				continue
+			}
+			res.WriteMIME(f)
+			f.Close()
+		}
+	}
 	return nil
 }
 
@@ -132,4 +142,10 @@ func readLines(fn string) (out []string, err error) {
 		}
 	}
 	return
+}
+
+func sha1base32(buf []byte) string {
+	h := sha1.New()
+	h.Write(buf)
+	return strings.ToLower(base32.HexEncoding.EncodeToString(h.Sum(nil)))
 }
