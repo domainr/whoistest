@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"crypto/sha1"
-	"encoding/base32"
+	"encoding/hex"
 	"flag"
 	"fmt"
 	"os"
@@ -117,7 +117,7 @@ func main1() error {
 				continue
 			}
 
-			fn := filepath.Join(dir, (sha1base32(res.Body) + ".mime"))
+			fn := filepath.Join(dir, (sha1hex(res.Body) + ".mime"))
 			f, err := os.Create(fn)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
@@ -150,8 +150,8 @@ func readLines(fn string) (out []string, err error) {
 	return
 }
 
-func sha1base32(buf []byte) string {
+func sha1hex(buf []byte) string {
 	h := sha1.New()
 	h.Write(buf)
-	return strings.ToLower(base32.HexEncoding.EncodeToString(h.Sum(nil)))
+	return strings.ToLower(hex.EncodeToString(h.Sum(nil)))
 }

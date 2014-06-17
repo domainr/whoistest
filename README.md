@@ -1,6 +1,6 @@
 # whois-fixtures
 
-Shared fixture data for developing whois parsers. Extracted from [@domainr/go-whois](https://github.com/domainr/go-whois). Organizes responses by server hostname and content-addressable filenames (base32hex SHA-1).
+Shared fixture data for developing whois parsers. Extracted from [@domainr/go-whois](https://github.com/domainr/go-whois). Organizes responses by server hostname + SHA-1 of response bytes.
 
 ## Usage
 
