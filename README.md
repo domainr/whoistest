@@ -4,7 +4,8 @@ Shared fixture data for developing whois parsers. Extracted from [@domainr/go-wh
 
 ## Usage
 
-```go get github.com/domainr/whois-fixtures
+```
+go get github.com/domainr/whois-fixtures
 whois-fixtures
 ```
 
