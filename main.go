@@ -2,15 +2,13 @@ package main
 
 import (
 	"bufio"
-	"crypto/sha1"
-	"encoding/hex"
+
 	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
 	"regexp"
 	"runtime"
-	"strings"
 	"sync"
 
 	"code.google.com/p/go.net/idna"
@@ -146,7 +144,7 @@ func main1() error {
 				return
 			}
 
-			fn := filepath.Join(dir, (sha1hex(res.Body) + ".mime"))
+			fn := filepath.Join(dir, (res.Checksum() + ".mime"))
 			f, err := os.Create(fn)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
@@ -183,10 +181,4 @@ func readLines(fn string) ([]string, error) {
 		}
 	}
 	return out, s.Err()
-}
-
-func sha1hex(buf []byte) string {
-	h := sha1.New()
-	h.Write(buf)
-	return strings.ToLower(hex.EncodeToString(h.Sum(nil)))
 }
