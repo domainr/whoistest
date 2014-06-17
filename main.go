@@ -1,14 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	"runtime"
-	"strings"
 	"sync"
 
 	"code.google.com/p/go.net/idna"
@@ -89,18 +88,18 @@ func main1() error {
 	return nil
 }
 
-var re = regexp.MustCompile("\\s+|#.+$")
+var re = regexp.MustCompile(`\s+|#.+$`)
 
 func readLines(fn string) (out []string, err error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
-	buf, err := ioutil.ReadFile(filepath.Join(DIR, "data", fn))
+	f, err := os.Open(filepath.Join(DIR, "data", fn))
 	if err != nil {
 		return
 	}
-	s := strings.Trim(string(buf), "\n")
-	lines := strings.Split(s, "\n")
-	for _, line := range lines {
-		line = re.ReplaceAllLiteralString(line, "")
+	defer f.Close()
+	s := bufio.NewScanner(f)
+	for s.Scan() {
+		line := re.ReplaceAllLiteralString(s.Text(), "")
 		if line != "" {
 			line, _ = idna.ToASCII(line)
 			out = append(out, line)
