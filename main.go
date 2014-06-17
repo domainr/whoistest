@@ -52,7 +52,7 @@ func main1() error {
 	// Quick for debugging?
 	if quick {
 		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
-		zones = zones[0:50]
+		zones = []string{"com", "net", "org", "co", "io", "nr"}
 	}
 
 	domains := make(map[string]bool, len(zones)*len(prefixes))
