@@ -118,6 +118,16 @@ func main1() error {
 				return
 			}
 
+			if res.Host == "" {
+				fmt.Fprintf(os.Stderr, "Response for %q had no host\n", res.Query)
+				return
+			}
+
+			if len(res.Body) == 0 {
+				fmt.Fprintf(os.Stderr, "Response for %q had empty body\n", res.Query)
+				return
+			}
+
 			dir := filepath.Join(DIR, "data", "responses", res.Host)
 			err := os.MkdirAll(dir, os.ModePerm)
 			if err != nil {
