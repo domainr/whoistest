@@ -55,34 +55,60 @@ func main1() error {
 		zones = zones[0:50]
 	}
 
-	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
-	var wg sync.WaitGroup
-
-	fmt.Fprintf(os.Stderr, "Querying whois for %d prefixes and %d zones\n", len(prefixes), len(zones))
-
+	domains := make(map[string]bool, len(zones)*len(prefixes))
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
-			wg.Add(1)
-			go func(domain string) {
-				limiter <- struct{}{} // acquire semaphore
-				defer func() {        // release semaphore
-					<-limiter
-					wg.Done()
-				}()
-
-				req, err := whois.Resolve(domain)
-				if err != nil {
-					return
-				}
-
-				err = os.MkdirAll(filepath.Join(DIR, "data", "responses", req.Host), os.ModePerm)
-				if err != nil {
-					return
-				}
-			}(fmt.Sprintf("%s.%s", prefix, zone))
+			domain := prefix + "." + zone
+			domains[domain] = true
+			req, err := whois.Resolve(domain)
+			if err == nil {
+				domains[req.Host] = true
+			}
 		}
 	}
 
+	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones)\n", len(domains), len(prefixes), len(zones))
+
+	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
+	var wg sync.WaitGroup
+	for domain, _ := range domains {
+		wg.Add(1)
+		go func(domain string) {
+			limiter <- struct{}{} // acquire semaphore
+			defer func() {        // release semaphore
+				<-limiter
+				wg.Done()
+			}()
+
+			req, err := whois.Resolve(domain)
+			if err != nil {
+				return
+			}
+
+			res, err := req.Fetch()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error fetching whois for %s: %s\n", req.Query, err)
+				return
+			}
+
+			dir := filepath.Join(DIR, "data", "responses", req.Host)
+			err = os.MkdirAll(dir, os.ModePerm)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", req.Host, err)
+				return
+			}
+
+			fn := filepath.Join(dir, req.Query+".mime")
+			f, err := os.Create(fn)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", req.Query, err)
+				return
+			}
+			defer f.Close()
+			
+			res.WriteMIME(f)
+		}(domain)
+	}
 	wg.Wait()
 
 	return nil
