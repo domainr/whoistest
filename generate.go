@@ -59,20 +59,18 @@ func main1() error {
 	}
 
 	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
-	var mutex sync.Mutex
+	var wg sync.WaitGroup
 
 	fmt.Fprintf(os.Stderr, "Querying whois for %d prefixes and %d zones\n", len(prefixes), len(zones))
 
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
-			domain := fmt.Sprintf("%s.%s", prefix, zone)
-			fmt.Printf("%s\n", domain)
-			// FIXME: this SHOULD run under a goroutine, but it currently behaves incorrectly
-			// go func(domain string) {
-			func(domain string) {
+			wg.Add(1)
+			go func(domain string) {
 				limiter <- struct{}{} // acquire semaphore
 				defer func() {        // release semaphore
 					<-limiter
+					wg.Done()
 				}()
 
 				req, err := whois.Resolve(domain)
@@ -80,15 +78,15 @@ func main1() error {
 					return
 				}
 
-				mutex.Lock()
 				err = os.MkdirAll(filepath.Join(DIR, "data", req.Host), os.ModePerm)
-				mutex.Unlock()
 				if err != nil {
 					return
 				}
-			}(domain)
+			}(fmt.Sprintf("%s.%s", prefix, zone))
 		}
 	}
+
+	wg.Wait()
 
 	return nil
 }
