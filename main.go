@@ -94,6 +94,9 @@ func main1() error {
 				return
 			}
 
+			if v {
+				fmt.Fprintf(os.Stderr, "Fetching %s from %s\n", req.Query, req.Host)
+			}
 			res, err = req.Fetch()
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error fetching whois for %s: %s\n", req.Query, err)
