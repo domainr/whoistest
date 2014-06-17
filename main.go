@@ -1,5 +1,3 @@
-// +build ignore
-
 package main
 
 import (
@@ -78,7 +76,7 @@ func main1() error {
 					return
 				}
 
-				err = os.MkdirAll(filepath.Join(DIR, "data", req.Host), os.ModePerm)
+				err = os.MkdirAll(filepath.Join(DIR, "data", "responses", req.Host), os.ModePerm)
 				if err != nil {
 					return
 				}
