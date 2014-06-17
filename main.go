@@ -18,12 +18,12 @@ import (
 )
 
 var (
-	v, quick      bool
-	concurrency   int
-	zones         []string
-	prefixes      []string
-	_, FILE, _, _ = runtime.Caller(0)
-	DIR           = filepath.Dir(FILE)
+	v, quick       bool
+	concurrency    int
+	zones          []string
+	prefixes       []string
+	_, _file, _, _ = runtime.Caller(0)
+	_dir           = filepath.Dir(_file)
 )
 
 func init() {
@@ -128,7 +128,7 @@ func main1() error {
 				return
 			}
 
-			dir := filepath.Join(DIR, "data", "responses", res.Host)
+			dir := filepath.Join(_dir, "data", "responses", res.Host)
 			err := os.MkdirAll(dir, os.ModePerm)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", res.Host, err)
@@ -154,7 +154,7 @@ var whitespaceAndComments = regexp.MustCompile(`\s+|#.+$`)
 
 func readLines(fn string) ([]string, error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
-	f, err := os.Open(filepath.Join(DIR, "data", fn))
+	f, err := os.Open(filepath.Join(_dir, "data", fn))
 	if err != nil {
 		return nil, err
 	}
