@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"runtime"
 	"strings"
+	"sync"
 
 	"code.google.com/p/go.net/idna"
 	"github.com/domainr/go-whois/whois"
@@ -77,7 +78,7 @@ func main1() error {
 
 	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones + extras)\n", len(domains), len(prefixes), len(zones))
 
-	responses := make(chan *whois.Response, len(domains))
+	responses := make(chan *whois.Response)
 	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
 	for domain, _ := range domains {
 		go func(domain string) {
@@ -106,30 +107,36 @@ func main1() error {
 	}
 
 	// Collect from goroutines
+	var wg sync.WaitGroup
+	wg.Add(len(domains))
 	for i := 0; i < len(domains); i++ {
-		select {
-		case res := <-responses:
+		go func() {
+			res := <-responses
+			defer wg.Done()
+
 			if res == nil {
-				continue
+				return
 			}
 
 			dir := filepath.Join(DIR, "data", "responses", res.Host)
-			err = os.MkdirAll(dir, os.ModePerm)
+			err := os.MkdirAll(dir, os.ModePerm)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", res.Host, err)
-				continue
+				return
 			}
 
 			fn := filepath.Join(dir, (sha1hex(res.Body) + ".mime"))
 			f, err := os.Create(fn)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
-				continue
+				return
 			}
+			defer f.Close()
 			res.WriteMIME(f)
-			f.Close()
-		}
+		}()
 	}
+	wg.Wait()
+
 	return nil
 }
 
