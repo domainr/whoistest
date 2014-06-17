@@ -14,12 +14,13 @@ import (
 	"sync"
 
 	"code.google.com/p/go.net/idna"
-	"github.com/domainr/go-whois/whois"
 	_ "github.com/domainr/go-whois/servers"
+	"github.com/domainr/go-whois/whois"
 )
 
 var (
 	v, quick       bool
+	oneZone        string
 	concurrency    int
 	zones          []string
 	prefixes       []string
@@ -29,7 +30,8 @@ var (
 
 func init() {
 	flag.BoolVar(&v, "v", false, "verbose output (to stderr)")
-	flag.BoolVar(&quick, "quick", false, "Only work on a subset of zones")
+	flag.BoolVar(&quick, "quick", false, "Only query a shorter subset of zones")
+	flag.StringVar(&oneZone, "zone", "", "Only query a specific zone")
 	flag.IntVar(&concurrency, "concurrency", 32, "Set maximum number of concurrent requests")
 }
 
@@ -58,6 +60,13 @@ func main1() error {
 		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
 		zones = []string{"com", "net", "org", "co", "io", "nr"}
 		concurrency = 4 // Don’t slam the .org whois server
+	}
+
+	// One zone?
+	if oneZone != "" {
+		fmt.Fprintf(os.Stderr, "Querying single zone: %s\n", oneZone)
+		zones = []string{oneZone}
+		concurrency = 1
 	}
 
 	re := regexp.MustCompile(`^[^\.]+\.`)
