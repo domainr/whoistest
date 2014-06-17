@@ -15,6 +15,7 @@ import (
 
 	"code.google.com/p/go.net/idna"
 	"github.com/domainr/go-whois/whois"
+	_ "github.com/domainr/go-whois/servers"
 )
 
 var (
