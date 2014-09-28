@@ -1,3 +1,5 @@
+// +build ignore
+
 package main
 
 import (
@@ -12,8 +14,7 @@ import (
 	"sync"
 
 	"code.google.com/p/go.net/idna"
-	_ "github.com/domainr/go-whois/servers"
-	"github.com/domainr/go-whois/whois"
+	"github.com/domainr/whois"
 )
 
 var (
