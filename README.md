@@ -1,13 +1,8 @@
-# whois-fixtures
+# Whois Test Data
 
-Shared fixture data for developing whois parsers. Extracted from [@domainr/whois](https://github.com/domainr/whois). Organizes responses by server hostname + SHA-1 of response bytes.
+`go get github.com/domainr/whoistest`
 
-## Usage
-
-```
-go get github.com/domainr/whois-fixtures
-whois-fixtures
-```
+Shared test data for developing whois parsers. Extracted from [@domainr/whois](https://github.com/domainr/whois). Organizes responses by server hostname + SHA-1 of response bytes.
 
 ## Dependencies
 
