@@ -1,5 +1,5 @@
 # Top-level, second-level, and third-level domains
-# Derived from the Domainr data set at https://domai.nr/about/tlds
+# Derived from the Domainr data set at https://domainr.com/about/tlds
 コム
 닷넷
 닷컴
