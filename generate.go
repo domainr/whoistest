@@ -57,8 +57,7 @@ func main1() error {
 	// Quick for debugging?
 	if quick {
 		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
-		zones = []string{"com", "net", "org", "co", "io", "nr", "kr", "jp"}
-		concurrency = 4 // Don’t slam the .org whois server
+		zones = []string{"com", "net", "org", "co", "io", "nr", "kr", "jp", "de", "in"}
 	}
 
 	// One zone?
