@@ -64,7 +64,6 @@ func main1() error {
 	if oneZone != "" {
 		fmt.Fprintf(os.Stderr, "Querying single zone: %s\n", oneZone)
 		zones = []string{oneZone}
-		concurrency = 1
 	}
 
 	re := regexp.MustCompile(`^[^\.]+\.`)
@@ -88,21 +87,37 @@ func main1() error {
 	fmt.Fprintf(os.Stderr, "Querying whois for %d domains (%d prefixes × %d zones + extras)\n", len(domains), len(prefixes), len(zones))
 
 	responses := make(chan *whois.Response)
-	limiter := make(chan struct{}, concurrency) // semaphore to limit concurrency
+	var limiter = make(chan struct{}, concurrency)
+	var hostLimiters = make(map[string](chan struct{}))
+	m := &sync.RWMutex{}
 	for domain, _ := range domains {
 		go func(domain string) {
 			var res *whois.Response
-
-			limiter <- struct{}{} // acquire semaphore
-			defer func() {        // release semaphore
-				responses <- res
-				<-limiter
-			}()
 
 			req, err := whois.Resolve(domain)
 			if err != nil {
 				return
 			}
+
+			// Per-host semaphore to limit concurrency
+			m.RLock()
+			hostLimiter, ok := hostLimiters[req.Host]
+			m.RUnlock()
+			if !ok {
+				m.Lock()
+				hostLimiters[req.Host] = make(chan struct{}, 1)
+				hostLimiter = hostLimiters[req.Host]
+				m.Unlock()
+			}
+			// Acquire
+			hostLimiter <- struct{}{}
+			limiter <- struct{}{}
+			// Release
+			defer func() {
+				responses <- res
+				<-hostLimiter
+				<-limiter
+			}()
 
 			if v {
 				fmt.Fprintf(os.Stderr, "Fetching %s from %s\n", req.Query, req.Host)
