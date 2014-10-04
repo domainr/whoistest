@@ -66,19 +66,19 @@ func main1() error {
 		zones = []string{oneZone}
 	}
 
-	re := regexp.MustCompile(`^[^\.]+\.`)
+	firstLabel := regexp.MustCompile(`^[^\.]+\.`)
 
 	domains := make(map[string]bool, len(zones)*len(prefixes))
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
 			domain := prefix + "." + zone
 			domains[domain] = true
-			req, err := whois.Resolve(domain)
+			host, err := whois.Resolve(domain)
 			if err == nil {
-				hostParent := re.ReplaceAllLiteralString(req.Host, "")
-				if _, ok := domains[hostParent]; !ok && hostParent != "" {
-					fmt.Fprintf(os.Stderr, "  + %s\n", hostParent)
-					domains[hostParent] = true
+				parent := firstLabel.ReplaceAllLiteralString(host, "")
+				if _, ok := domains[parent]; !ok && parent != "" {
+					fmt.Fprintf(os.Stderr, "  + %s\n", parent)
+					domains[parent] = true
 				}
 			}
 		}
@@ -94,7 +94,7 @@ func main1() error {
 		go func(domain string) {
 			var res *whois.Response
 
-			req, err := whois.Resolve(domain)
+			req, err := whois.NewRequest(domain)
 			if err != nil {
 				return
 			}
