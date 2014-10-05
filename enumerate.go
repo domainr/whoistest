@@ -10,6 +10,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"regexp"
 
 	"github.com/domainr/whois"
 	"github.com/domainr/whoistest"
@@ -37,16 +38,13 @@ func main1() error {
 		if res.MediaType != "text/plain" {
 			continue
 		}
-
-		fmt.Printf("File:  %s\n", fn)
-		fmt.Printf("Query: %s\n", res.Query)
-		fmt.Printf("Host:  %s\n", res.Host)
-		fmt.Printf("\n")
 		scan(res)
-		fmt.Printf("\n\n\n")
 	}
 	return nil
 }
+
+var colonElement = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
+var bracketElement = regexp.MustCompile(`^\s*\[\s*([^\]]*\S)\s*\]\s*(.*\S)\s*$`)
 
 func scan(res *whois.Response) {
 	r, err := res.Reader()
@@ -57,6 +55,18 @@ func scan(res *whois.Response) {
 	s := bufio.NewScanner(r)
 	for s.Scan() {
 		line++
-		fmt.Printf("% 4d %s\n", line, s.Text())
+		// fmt.Printf("% 4d %s\n", line, s.Text())
+		text := s.Text()
+		
+		if m := colonElement.FindStringSubmatch(text); m != nil {
+			fmt.Printf("COLON ELEMENT:   %s: %s\n", m[1], m[2])
+			continue
+		}
+		
+		if m := bracketElement.FindStringSubmatch(text); m != nil {
+			fmt.Printf("BRACKET ELEMENT: %s: %s\n", m[1], m[2])
+			continue
+		}
 	}
+	fmt.Printf("\n")
 }
