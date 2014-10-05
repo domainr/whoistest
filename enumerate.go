@@ -44,13 +44,18 @@ func main1() error {
 }
 
 var (
-	reEmptyLine   = regexp.MustCompile(`^\s*$`)
-	reKeyValue    = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
-	jpNotice      = `^\[ .+ \]$`
-	deNotice      = `^% .*$`
-	updated       = `^<<<.+>>>$`
-	reNotice      = regexp.MustCompile(jpNotice + "|" + deNotice + "|" + updated)
+	reEmptyLine     = regexp.MustCompile(`^\s*$`)
+	reKey           = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*$`)
+	reKeyValue      = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
+	reAltKey        = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*$`)
+	reAltKeyValue   = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+	reIndentedValue = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
+	deNotice        = `^% .*$`
+	jpNotice        = `^\[ .+ \]$`
+	krNotice        = `^# .*$`
+	updated         = `^<<<.+>>>$`
+	reNotice        = regexp.MustCompile(
+		deNotice + "|" + jpNotice + "|" + krNotice + "|" + updated)
 )
 
 func scan(res *whois.Response) {
@@ -75,12 +80,27 @@ func scan(res *whois.Response) {
 		}
 
 		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "ALT_KEY_VALUE", m[1], m[2])
+			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "ALT_KEY_VALUE", m[1], m[2])
+			continue
+		}
+
+		if m := reAltKey.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 20s  %s\n", line, "ALT_KEY", m[1])
 			continue
 		}
 
 		if m := reKeyValue.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "KEY_VALUE", m[1], m[2])
+			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "KEY_VALUE", m[1], m[2])
+			continue
+		}
+
+		if m := reKey.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 20s  %s\n", line, "KEY", m[1])
+			continue
+		}
+
+		if m := reIndentedValue.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "INDENTED_VALUE", "", m[1])
 			continue
 		}
 
