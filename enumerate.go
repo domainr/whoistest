@@ -64,10 +64,10 @@ func main1() error {
 
 var (
 	reEmptyLine   = regexp.MustCompile(`^\s*$`)
-	reBareKey     = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*$`)
-	reKeyValue    = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-	reAltKey      = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*$`)
-	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+	reBareKey     = regexp.MustCompile(`^\s*([^\:,]{1,39}\S)\s*\:\s*$`)
+	reKeyValue    = regexp.MustCompile(`^\s*([^\:,]{1,39}\S)\s*\:\s*(.*\S)\s*$`)
+	reAltKey      = regexp.MustCompile(`^\s*\[([^\],]{1,39}\S)\]\s*$`)
+	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\],]{1,39}\S)\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
 	reNotice      = regexp.MustCompile(strings.Join([]string{
 		`^% .*$`,            // whois.de
@@ -100,47 +100,63 @@ func scan(res *whois.Response) {
 			continue
 		}
 		if m := reNotice.FindStringSubmatch(text); m != nil {
-			color.Printf("@{|w}%- 10s  %s\n", "NOTICE", m[0])
+			color.Printf("@{|w}%- 16s  %s\n", "NOTICE", text)
 			continue
 		}
 
 		// Keys and values
 		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
-			addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", m[1], m[2])
+			k, v := addKey(m[1], res.Host), m[2]
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", k, v)
 			continue
 		}
 		if m := reAltKey.FindStringSubmatch(text); m != nil {
-			addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 10s  @{c}%s\n", "ALT_KEY", m[1])
+			k := addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_ALT_KEY", k)
 			continue
 		}
 		if m := reKeyValue.FindStringSubmatch(text); m != nil {
-			addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", m[1], m[2])
+			k, v := addKey(m[1], res.Host), m[2]
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", k, v)
 			continue
 		}
 		if m := reBareKey.FindStringSubmatch(text); m != nil {
-			addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 10s  @{c}%s\n", "BARE_KEY", m[1])
+			k := addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_KEY", k)
 			continue
 		}
 		if m := reBareValue.FindStringSubmatch(text); m != nil {
-			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "BARE_VALUE", "", m[1])
+			v := m[1]
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "BARE_VALUE", "", v)
 			continue
 		}
 
 		// Unknown
-		color.Printf("@{|.}%- 10s  @{|.}%s\n", "UNKNOWN", text)
+		color.Printf("@{|.}%- 16s  @{|.}%s\n", "UNKNOWN", text)
 	}
 
 	fmt.Printf("\n")
 }
 
-func addKey(k, host string) {
+func addKey(k, host string) string {
+	k = transformKey(k)
 	if _, ok := keys[k]; !ok {
 		keys[k] = host
 	} else if !strings.Contains(keys[k], host) {
 		keys[k] = keys[k] + "  " + host
 	}
+	return k
+}
+
+var (
+	reStrip      = regexp.MustCompile(`[\.\(\)]`)
+	reUnderscore = regexp.MustCompile(`\s+|/`)
+)
+
+func transformKey(k string) string {
+	k = strings.TrimSpace(k)
+	k = strings.ToUpper(k)
+	k = reStrip.ReplaceAllLiteralString(k, "")
+	k = reUnderscore.ReplaceAllLiteralString(k, "_")
+	return k
 }
