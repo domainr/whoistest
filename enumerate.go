@@ -32,19 +32,27 @@ func main() {
 }
 
 func main1() error {
+	wd, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+	wd = wd + "/"
+
 	fns, err := whoistest.ResponseFiles()
 	if err != nil {
 		return err
 	}
+
 	for _, fn := range fns {
 		res, err := whois.ReadMIMEFile(fn)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error reading response file %s: %s\n", fn, err)
+			color.Fprintf(os.Stderr, "@{|r}Error reading response file %s: %s\n", fn, err)
 			continue
 		}
 		if res.MediaType != "text/plain" {
 			continue
 		}
+		color.Printf("@{|g}%s\n", strings.TrimPrefix(fn, wd))
 		scan(res)
 	}
 
