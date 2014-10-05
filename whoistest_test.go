@@ -14,17 +14,8 @@ func TestResponseFiles(t *testing.T) {
 	st.Assert(t, err, nil)
 	for _, fn := range fns {
 		fmt.Printf("%s\n", fn)
-		res, err := readMIMEFile(fn)
+		res, err := whois.ReadMIMEFile(fn)
 		st.Refute(t, res, nil)
 		st.Assert(t, err, nil)
 	}
-}
-
-func readMIMEFile(fn string) (*whois.Response, error) {
-	f, err := os.Open(fn)
-	if err != nil {
-		return nil, err
-	}
-	defer f.Close()
-	return whois.ReadMIME(f)
 }
