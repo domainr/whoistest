@@ -1,0 +1,61 @@
+MIME-Version: 1.0
+Content-Checksum: 4ae4694f6ca2787759c2ac869b36e18b1e5719cd
+Content-Length: 1298
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:34Z
+Host: whois.isnic.is
+Query: isnic.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       isnic.is
+descr:        Internet á Íslandi hf.
+descr:        Katrínartúni 2
+descr:        IS-105 Reykjavík
+e-mail:       isnic@isnic.is
+admin-c:      JENS-IS
+tech-c:       ISHM-IS
+zone-c:       ISHM-IS
+billing-c:    ISBC-IS
+nserver:      aker.isnic.is
+nserver:      hathor.isnic.is
+nserver:      ns.colo-a.isnic.is
+dnssec:       signed delegation
+created:      September  5 2000
+expires:      September  5 2015
+source:       ISNIC 
+
+role:         Internet á Íslandi hf.
+address:      Katrínartúni 2
+address:      IS-105 Reykjavík
+phone:        +354 578 2030
+fax-no:       +354 578 2031
+e-mail:       bokhald@isnic.is
+nic-hdl:      ISBC-IS
+created:      November  6 2000
+source:       ISNIC 
+
+person:       Jens Pétur Jensen
+address:      Bauganesi 8
+address:      IS-101 Reykjavík
+phone:         
+fax-no:        
+e-mail:       jens@isnic.is
+nic-hdl:      JENS-IS
+created:      December 15 1999
+source:       ISNIC 
+
+role:         ISNIC Hostmaster
+address:      Katrínartúni 2
+address:      IS-105 Reykjavík
+phone:        +354 578 2030
+fax-no:       +354 578 2031
+e-mail:       hostmaster@isnic.is
+nic-hdl:      ISHM-IS
+created:      May 15 2002
+source:       ISNIC 
+
+

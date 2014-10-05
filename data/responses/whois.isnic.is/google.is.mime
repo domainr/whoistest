@@ -1,0 +1,65 @@
+MIME-Version: 1.0
+Content-Checksum: d690d3d42994ff239eda2e276fcf60b91bc04fd0
+Content-Length: 1405
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:33Z
+Host: whois.isnic.is
+Query: google.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       google.is
+descr:        Google Inc
+descr:        1600 Ampitheatre Parkway
+descr:        Mountain View, California 94043
+descr:        US
+e-mail:       dns-admin@google.com
+admin-c:      GI58-IS
+tech-c:       MTC2-IS
+zone-c:       AG49-IS
+billing-c:    MTC2-IS
+nserver:      ns1.google.com
+nserver:      ns2.google.com
+dnssec:       unsigned delegation
+created:      May 22 2002
+expires:      May 22 2015
+source:       ISNIC 
+
+person:       Markmonitor Tech Contact
+address:      391 N. Ancestor Pl.
+address:      Boise, ID 83704
+address:      US
+phone:        +1 208 3895740
+fax-no:        
+e-mail:       ccops@markmonitor.com
+nic-hdl:      MTC2-IS
+created:      July 22 2004
+source:       ISNIC 
+
+role:         Google Inc.
+address:      1600 Amphitheatre Parkway
+address:      Mountain View, CA 94043
+address:      US
+phone:         
+fax-no:        
+e-mail:       ccops@markmonitor.com
+nic-hdl:      GI58-IS
+created:      October  9 2012
+source:       ISNIC 
+
+person:       Amit Garg
+address:      Google Inc.
+address:      1600 Amphitheatre Parkway
+address:      Mountain View, CA 94043
+address:      US
+phone:        +1 650 3300100
+fax-no:       +1 650 6188571
+e-mail:       dns-admin@google.com
+nic-hdl:      AG49-IS
+created:      October  3 2004
+source:       ISNIC 
+
+

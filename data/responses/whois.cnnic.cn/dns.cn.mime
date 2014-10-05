@@ -1,0 +1,21 @@
+MIME-Version: 1.0
+Content-Checksum: 196d5c3c50fbb5f94e4ef5d1bf21422409ea8dab
+Content-Length: 412
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2014-10-05T20:38:13Z
+Host: whois.cnnic.cn
+Query: dns.cn
+
+Domain Name: dns.cn
+ROID: 20030310s10001s00012964-cn
+Domain Status: ok
+Registrant ID: s1255673574881
+Registrant: 中国互联网络信息中心
+Registrant Contact Email: servicei@cnnic.cn
+Sponsoring Registrar: 北京中科三方网络技术有限公司
+Name Server: a.dns.cn
+Name Server: b.dns.cn
+Name Server: c.dns.cn
+Registration Date: 2003-03-10 19:06:38
+Expiration Date: 2015-03-10 19:06:38
+DNSSEC: unsigned

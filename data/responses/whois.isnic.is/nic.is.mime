@@ -1,0 +1,61 @@
+MIME-Version: 1.0
+Content-Checksum: 81b8ce7f38916e6e125b158f2477eadf9c7ae90a
+Content-Length: 1334
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:34Z
+Host: whois.isnic.is
+Query: nic.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       nic.is
+descr:        Internet á Íslandi hf.
+descr:        Katrínartúni 2
+descr:        IS-105 Reykjavík
+e-mail:       hostmaster@isnic.is
+admin-c:      MO33
+tech-c:       ISHM-IS
+zone-c:       ISHM-IS
+billing-c:    ISBC-IS
+nserver:      aker.isnic.is
+nserver:      hathor.isnic.is
+nserver:      ns.colo-a.isnic.is
+dnssec:       unsigned delegation
+created:      September  5 2000
+expires:      September  5 2015
+source:       ISNIC 
+
+person:       Maríus Ólafsson
+address:      ISNIC - Internet á Íslandi hf
+address:      Katrínartún 2 - 17h
+address:      IS-105 Reykjavík
+phone:         
+e-mail:       marius@isgate.is
+nic-hdl:      MO33
+created:      February  1 1995
+source:       ISNIC 
+
+role:         Internet á Íslandi hf.
+address:      Katrínartúni 2
+address:      IS-105 Reykjavík
+phone:        +354 578 2030
+fax-no:       +354 578 2031
+e-mail:       bokhald@isnic.is
+nic-hdl:      ISBC-IS
+created:      November  6 2000
+source:       ISNIC 
+
+role:         ISNIC Hostmaster
+address:      Katrínartúni 2
+address:      IS-105 Reykjavík
+phone:        +354 578 2030
+fax-no:       +354 578 2031
+e-mail:       hostmaster@isnic.is
+nic-hdl:      ISHM-IS
+created:      May 15 2002
+source:       ISNIC 
+
+

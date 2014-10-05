@@ -1,0 +1,25 @@
+MIME-Version: 1.0
+Content-Checksum: e99318032499d5b99888b4bcbd0046bb28791a8f
+Content-Length: 566
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2014-10-05T20:38:13Z
+Host: whois.cnnic.cn
+Query: cnnic.cn
+
+Domain Name: cnnic.cn
+ROID: 20030310s10001s00012956-cn
+Domain Status: serverDeleteProhibited
+Domain Status: serverUpdateProhibited
+Domain Status: serverTransferProhibited
+Registrant ID: s1255673574881
+Registrant: 中国互联网络信息中心
+Registrant Contact Email: servicei@cnnic.cn
+Sponsoring Registrar: 北京中科三方网络技术有限公司
+Name Server: a.cnnic.cn
+Name Server: b.cnnic.cn
+Name Server: c.cnnic.cn
+Name Server: d.cnnic.cn
+Name Server: e.cnnic.cn
+Registration Date: 2003-03-10 19:06:34
+Expiration Date: 2018-03-10 19:06:34
+DNSSEC: unsigned

@@ -1,0 +1,57 @@
+MIME-Version: 1.0
+Content-Checksum: 9b3d702bb76fe5d0c0bb9fd27d7eab8708cdda6b
+Content-Length: 1191
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:33Z
+Host: whois.isnic.is
+Query: whois.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       whois.is
+descr:        Name.com LLC
+descr:        2500 East Second Avenue
+descr:        Second Floor
+descr:        Denver, CO 80206
+descr:        US
+e-mail:       notify@name.com
+admin-c:      NI42-IS
+tech-c:       NI42-IS
+zone-c:       NL8-IS
+billing-c:    NI42-IS
+nserver:      ns1.name.com
+nserver:      ns2.name.com
+dnssec:       unsigned delegation
+created:      May  3 2006
+expires:      May  3 2015
+source:       ISNIC 
+
+person:       Name.com Inc.
+address:      Name.com Inc.
+address:      2500 East Second Avenue
+address:      Second floor
+address:      Denver, Colorado 80206
+address:      Denver, USA 80206
+address:      US
+phone:        +720 937 6321
+e-mail:       notify@name.com
+nic-hdl:      NI42-IS
+created:      March 12 2014
+source:       ISNIC 
+
+person:       Name.com LLc
+address:      2500 East Second Avenue
+address:      Second Floor
+address:      Denver, CO 80206
+address:      US
+phone:        +1 720 2492374
+fax-no:       +1 303 3643646
+e-mail:       dns@name.com
+nic-hdl:      NL8-IS
+created:      May  2 2006
+source:       ISNIC 
+
+

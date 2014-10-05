@@ -1,0 +1,60 @@
+MIME-Version: 1.0
+Content-Checksum: a52955f6d771f651ec565d5ee04f4999602c8cb9
+Content-Length: 1219
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:33Z
+Host: whois.isnic.is
+Query: dns.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       dns.is
+descr:        Premis ehf.
+descr:        Hádegismóar 4
+descr:        IS-110 Reykjavík
+e-mail:       info@nethonnun.is
+admin-c:      NE51-IS
+tech-c:       NH3-IS
+zone-c:       XH3-IS
+billing-c:    NE51-IS
+nserver:      a.x.is
+nserver:      b.x.is
+nserver:      c.x.is
+nserver:      d.x.is
+dnssec:       unsigned delegation
+created:      March  8 2000
+expires:      March  8 2015
+source:       ISNIC 
+
+role:         Premis ehf.
+address:      Hádegismóum 4
+address:      IS-110 Reykjavík
+phone:        +354 517 3400
+e-mail:       domains@premis.is
+nic-hdl:      NE51-IS
+created:      February 19 2003
+source:       ISNIC 
+
+role:         NH Hostmaster
+address:      Premis ehf.
+address:      Hádegismóar 4
+address:      IS-110 Reykjavík
+phone:        +354 547 0000
+e-mail:       domains@premis.is
+nic-hdl:      NH3-IS
+created:      September  5 2002
+source:       ISNIC 
+
+role:         Xpress hosting
+address:      Hádegismóar 4
+address:      IS-110 Reykjavík
+phone:        +354 547 0000
+e-mail:       domains@x.is
+nic-hdl:      XH3-IS
+created:      June  2 2010
+source:       ISNIC 
+
+

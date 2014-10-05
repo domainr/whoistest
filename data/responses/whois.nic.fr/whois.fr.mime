@@ -1,0 +1,90 @@
+MIME-Version: 1.0
+Content-Checksum: 21b300ba80d04749d56ea930bb11329e1de35f06
+Content-Length: 2070
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:37:50Z
+Host: whois.nic.fr
+Query: whois.fr
+
+%%
+%% This is the AFNIC Whois server.
+%%
+%% complete date format : DD/MM/YYYY
+%% short date format    : DD/MM
+%% version              : FRNIC-2.5
+%%
+%% Rights restricted by copyright.
+%% See http://www.afnic.fr/afnic/web/mentions-legales-whois_en
+%%
+%% Use '-h' option to obtain more information about this service.
+%%
+%% [75.148.161.129 REQUEST] >> whois.fr
+%%
+%% RL Net [#########.] - RL IP [########..]
+%%
+
+domain:      whois.fr
+status:      ACTIVE
+hold:        NO
+holder-c:    AFNI2-FRNIC
+admin-c:     AFNI2-FRNIC
+tech-c:      GRST1-FRNIC
+tech-c:      AFNI2-FRNIC
+zone-c:      NFC1-FRNIC
+nsl-id:      NSL1-FRNIC
+registrar:   GIP RENATER
+anniversary: 21/04
+created:     21/04/2011
+last-update: 05/07/2011
+source:      FRNIC
+
+ns-list:     NSL1-FRNIC
+nserver:     ns1.nic.fr [192.134.4.1 2001:660:3003:2::4:1]
+nserver:     ns2.nic.fr [192.93.0.4 2001:660:3005:1::1:2]
+nserver:     ns3.nic.fr [192.134.0.49 2001:660:3006:1::1:1]
+source:      FRNIC
+
+registrar:   GIP RENATER
+type:        Isp Option 1
+address:     23-25 Rue Daviel
+address:     PARIS
+country:     FR
+phone:       +33 1 53 94 20 30
+fax-no:      +33 1 53 94 20 31
+e-mail:      domaine@renater.fr
+website:     http://www.renater.fr
+anonymous:   NO
+registered:  01/01/1998
+source:      FRNIC
+
+nic-hdl:     AFNI2-FRNIC
+type:        ORGANIZATION
+contact:     ASS FRANC NOMMAGE INTERNET EN COOP
+address:     2, rue Stephenson
+address:     immeuble international
+address:     78181 Saint Quentin en Yvelines Cedex
+country:     FR
+phone:       +33 1 39 30 83 00
+e-mail:      juridique@afnic.fr
+registrar:   GIP RENATER
+changed:     09/10/2008 whoismaster@nic.fr
+anonymous:   NO
+obsoleted:   NO
+eligstatus:  ok
+eligdate:    29/08/2008 00:00:00
+source:      FRNIC
+
+nic-hdl:     GRST1-FRNIC
+type:        PERSON
+contact:     Gip Renater Support Technique Dns
+address:     23-25, rue Daviel
+address:     75013 Paris
+country:     FR
+phone:       +33 1 53 94 20 40
+e-mail:      support-dns@support.renater.fr
+registrar:   GIP RENATER
+changed:     26/09/2011 nic@nic.fr
+anonymous:   NO
+obsoleted:   NO
+source:      FRNIC
+

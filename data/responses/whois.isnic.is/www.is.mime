@@ -1,0 +1,48 @@
+MIME-Version: 1.0
+Content-Checksum: eb6b34faeabb3dd106eaf2967d3c725e8291c33f
+Content-Length: 1004
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-05T20:39:32Z
+Host: whois.isnic.is
+Query: www.is
+
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       www.is
+descr:        Héðinn Karl Magnússon
+descr:        Illugagata 56
+descr:        IS-900 Vestmannaeyjar
+admin-c:      HM13-IS
+tech-c:       HM13-IS
+zone-c:       DFA10-IS
+billing-c:    HM13-IS
+nserver:      forwarding00.isnic.is
+nserver:      forwarding01.isnic.is
+dnssec:       unsigned delegation
+created:      November 28 2002
+expires:      November 28 2014
+source:       ISNIC 
+
+person:       Héðinn Karl Magnússon
+address:      [address withheld]
+address:      IS Vestmannaeyjar
+phone:        [withheld]
+e-mail:       hkarl@44.is
+nic-hdl:      HM13-IS
+created:      June 25 2002
+source:       ISNIC 
+
+role:         Domain Forwarding
+address:      Katrinartuni 2, 18. h.
+address:      IS-105 Reykjavík
+phone:        +354 578 2030
+fax-no:       +354 578 2031
+e-mail:       forwadm@isnic.is
+nic-hdl:      DFA10-IS
+created:      November 12 2009
+source:       ISNIC 
+
+
