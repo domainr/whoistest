@@ -71,9 +71,9 @@ var (
 	reAltKeyValue = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
 	reNotice      = regexp.MustCompile(strings.Join([]string{
-		`^% .*$`,            // whois.de
+		`^%`,                // whois.de, whois.registro.br
+		`^# `,               // whois.kr
 		`^\[ .+ \]$`,        // whois.jprs.jp
-		`^# .*$`,            // whois.kr
 		`^>>>.+<<<$`,        // Database last updated...
 		`^[^\:]+https?\://`, // Line with an URL
 		`^NOTE: |^NOTICE: |^to: `,
