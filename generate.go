@@ -4,6 +4,7 @@ package main
 
 import (
 	"bufio"
+	"time"
 
 	"flag"
 	"fmt"
@@ -15,11 +16,13 @@ import (
 
 	"code.google.com/p/go.net/idna"
 	"github.com/domainr/whois"
+	"github.com/domainr/whoistest"
 )
 
 var (
 	v, quick       bool
 	oneZone        string
+	maxAge         time.Duration
 	concurrency    int
 	zones          []string
 	prefixes       []string
@@ -32,6 +35,7 @@ func init() {
 	flag.BoolVar(&quick, "quick", false, "Only query a shorter subset of zones")
 	flag.StringVar(&oneZone, "zone", "", "Only query a specific zone")
 	flag.IntVar(&concurrency, "concurrency", 32, "Set maximum number of concurrent requests")
+	flag.DurationVar(&maxAge, "maxage", (24 * time.Hour * 30), "Set max age of responses before re-fetching")
 }
 
 func main() {
@@ -92,10 +96,18 @@ func main1() error {
 	m := &sync.RWMutex{}
 	for domain, _ := range domains {
 		go func(domain string) {
-			var res *whois.Response
-
 			req, err := whois.NewRequest(domain)
 			if err != nil {
+				return
+			}
+
+			// Only re-fetch responses > 1 month old
+			res, err := whois.ReadMIMEFile(whoistest.ResponseFilename(req.Query, req.Host))
+			if err == nil && time.Since(res.FetchedAt) < maxAge {
+				if v {
+					fmt.Fprintf(os.Stderr, "Skipping %s from %s\n", req.Query, req.Host)
+				}
+				responses <- nil
 				return
 			}
 
@@ -152,14 +164,15 @@ func main1() error {
 				return
 			}
 
-			dir := filepath.Join(_dir, "data", "responses", res.Host)
+			fn := whoistest.ResponseFilename(res.Query, res.Host)
+
+			dir := filepath.Dir(fn)
 			err := os.MkdirAll(dir, os.ModePerm)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response directory for %s: %s\n", res.Host, err)
 				return
 			}
 
-			fn := filepath.Join(dir, (res.Query + ".mime"))
 			f, err := os.Create(fn)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
