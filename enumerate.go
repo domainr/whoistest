@@ -106,28 +106,27 @@ func scan(res *whois.Response) {
 
 		// Keys and values
 		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
-			k, v := addKey(m[1], res.Host), m[2]
-			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", k, v)
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", m[1], m[2])
 			continue
 		}
 		if m := reAltKey.FindStringSubmatch(text); m != nil {
-			k := addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_ALT_KEY", k)
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_ALT_KEY", m[1])
 			continue
 		}
 		if m := reKeyValue.FindStringSubmatch(text); m != nil {
-			k, v := addKey(m[1], res.Host), m[2]
-			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", k, v)
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", m[1], m[2])
 			continue
 		}
 		if m := reBareKey.FindStringSubmatch(text); m != nil {
-			k := addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_KEY", k)
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_KEY", m[1])
 			continue
 		}
 		if m := reBareValue.FindStringSubmatch(text); m != nil {
-			v := m[1]
-			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "BARE_VALUE", "", v)
+			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "BARE_VALUE", "", m[1])
 			continue
 		}
 
