@@ -43,8 +43,9 @@ func main1() error {
 	return nil
 }
 
+var emptyLine = regexp.MustCompile(`^\s*$`)
 var colonElement = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-var bracketElement = regexp.MustCompile(`^\s*\[\s*([^\]]*\S)\s*\]\s*(.*\S)\s*$`)
+var bracketElement = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
 
 func scan(res *whois.Response) {
 	r, err := res.Reader()
@@ -55,20 +56,24 @@ func scan(res *whois.Response) {
 	s := bufio.NewScanner(r)
 	for s.Scan() {
 		line++
-		// fmt.Printf("% 4d %s\n", line, s.Text())
 		text := s.Text()
-		
+
+		if emptyLine.MatchString(text) {
+			fmt.Printf("% 4d  EMPTY\n", line)
+			continue
+		}
+
 		if m := colonElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("COLON ELEMENT:    %s: %s\n", m[1], m[2])
+			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "ELEMENT", m[1], m[2])
 			continue
 		}
 		
 		if m := bracketElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("BRACKET ELEMENT:  %s: %s\n", m[1], m[2])
+			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "B ELEMENT", m[1], m[2])
 			continue
 		}
 		
-		fmt.Fprintf(os.Stderr, "UNKNOWN:          %s\n", text)
+		fmt.Fprintf(os.Stderr, "% 4d  %- 18s  %s\n", line, "UNKNOWN",text)
 	}
 	fmt.Printf("\n")
 }
