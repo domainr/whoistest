@@ -159,7 +159,7 @@ func main1() error {
 				return
 			}
 
-			fn := filepath.Join(dir, (res.Checksum() + ".mime"))
+			fn := filepath.Join(dir, (res.Query + ".mime"))
 			f, err := os.Create(fn)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error creating response file for %s: %s\n", res.Query, err)
