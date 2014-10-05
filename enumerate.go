@@ -63,18 +63,21 @@ func main1() error {
 }
 
 var (
-	reEmptyLine     = regexp.MustCompile(`^\s*$`)
-	reKey           = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*$`)
-	reKeyValue      = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-	reAltKey        = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*$`)
-	reAltKeyValue   = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
-	reIndentedValue = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
-	deNotice        = `^% .*$`
-	jpNotice        = `^\[ .+ \]$`
-	krNotice        = `^# .*$`
-	updated         = `^>>>.+<<<$`
-	reNotice        = regexp.MustCompile(
-		deNotice + "|" + jpNotice + "|" + krNotice + "|" + updated)
+	reEmptyLine   = regexp.MustCompile(`^\s*$`)
+	reBareKey     = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*$`)
+	reKeyValue    = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
+	reAltKey      = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*$`)
+	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
+	reNotice      = regexp.MustCompile(strings.Join([]string{
+		`^% .*$`,            // whois.de
+		`^\[ .+ \]$`,        // whois.jprs.jp
+		`^# .*$`,            // whois.kr
+		`^>>>.+<<<$`,        // Database last updated...
+		`^[^\:]+https?\://`, // Line with an URL
+		`^NOTE: `,
+		`^NOTICE: `,
+	}, "|"))
 )
 
 func scan(res *whois.Response) {
@@ -117,13 +120,13 @@ func scan(res *whois.Response) {
 			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", m[1], m[2])
 			continue
 		}
-		if m := reKey.FindStringSubmatch(text); m != nil {
+		if m := reBareKey.FindStringSubmatch(text); m != nil {
 			addKey(m[1], res.Host)
-			color.Printf("@{|w}%- 10s  @{c}%s\n", "KEY", m[1])
+			color.Printf("@{|w}%- 10s  @{c}%s\n", "BARE_KEY", m[1])
 			continue
 		}
-		if m := reIndentedValue.FindStringSubmatch(text); m != nil {
-			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "INDENTED_VALUE", "", m[1])
+		if m := reBareValue.FindStringSubmatch(text); m != nil {
+			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "BARE_VALUE", "", m[1])
 			continue
 		}
 
