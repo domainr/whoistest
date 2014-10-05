@@ -54,20 +54,21 @@ func main1() error {
 	}
 	sort.Strings(sorted)
 
-	color.Printf("\n@{|w}%d unique keys parsed:\n", len(keys))
 	for _, k := range sorted {
 		color.Printf("@{|c}%- 40s  @{|.}%s\n", k, keys[k])
 	}
+	color.Printf("@{|w}%d unique keys found\n", len(keys))
 
 	return nil
 }
 
 var (
 	reEmptyLine   = regexp.MustCompile(`^\s*$`)
-	reBareKey     = regexp.MustCompile(`^\s*([^\:,]{1,39}\S)\s*\:\s*$`)
-	reKeyValue    = regexp.MustCompile(`^\s*([^\:,]{1,39}\S)\s*\:\s*(.*\S)\s*$`)
-	reAltKey      = regexp.MustCompile(`^\s*\[([^\],]{1,39}\S)\]\s*$`)
-	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\],]{1,39}\S)\]\s*(.*\S)\s*$`)
+	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]+)`
+	reBareKey     = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*$`)
+	reKeyValue    = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*(.*\S)\s*$`)
+	reAltKey      = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*$`)
+	reAltKeyValue = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
 	reNotice      = regexp.MustCompile(strings.Join([]string{
 		`^% .*$`,            // whois.de
@@ -75,8 +76,7 @@ var (
 		`^# .*$`,            // whois.kr
 		`^>>>.+<<<$`,        // Database last updated...
 		`^[^\:]+https?\://`, // Line with an URL
-		`^NOTE: `,
-		`^NOTICE: `,
+		`^NOTE: |^NOTICE: |^to: `,
 	}, "|"))
 )
 
@@ -154,9 +154,9 @@ var (
 )
 
 func transformKey(k string) string {
-	k = strings.TrimSpace(k)
-	k = strings.ToUpper(k)
-	k = reStrip.ReplaceAllLiteralString(k, "")
-	k = reUnderscore.ReplaceAllLiteralString(k, "_")
+	// k = strings.TrimSpace(k)
+	// k = strings.ToUpper(k)
+	// k = reStrip.ReplaceAllLiteralString(k, "")
+	// k = reUnderscore.ReplaceAllLiteralString(k, "_")
 	return k
 }
