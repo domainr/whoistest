@@ -11,13 +11,16 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"sort"
+	"strings"
 
 	"github.com/domainr/whois"
 	"github.com/domainr/whoistest"
+	"github.com/wsxiaoys/terminal/color"
 )
 
 var (
-	keys = make(map[string]bool)
+	keys = make(map[string]string)
 )
 
 func main() {
@@ -45,9 +48,15 @@ func main1() error {
 		scan(res)
 	}
 
-	fmt.Fprintf(os.Stderr, "\n%d unique keys parsed:\n", len(keys))
+	sorted := make([]string, 0, len(keys))
 	for k, _ := range keys {
-		fmt.Fprintf(os.Stderr, "%s\n", k)
+		sorted = append(sorted, k)
+	}
+	sort.Strings(sorted)
+
+	color.Printf("\n@{|w}%d unique keys parsed:\n", len(keys))
+	for _, k := range sorted {
+		color.Printf("@{|c}%- 40s  @{|.}%s\n", k, keys[k])
 	}
 
 	return nil
@@ -77,49 +86,58 @@ func scan(res *whois.Response) {
 	s := bufio.NewScanner(r)
 	for s.Scan() {
 		line++
+		color.Printf("@{|.}% 4d  ", line)
+
+		// Get next line
 		text := s.Text()
 
+		// Notices and empty lines
 		if reEmptyLine.MatchString(text) {
-			fmt.Printf("% 4d  EMPTY\n", line)
+			color.Printf("@{|w}EMPTY\n")
 			continue
 		}
-
 		if m := reNotice.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %s\n", line, "NOTICE", m[0])
+			color.Printf("@{|w}%- 10s  %s\n", "NOTICE", m[0])
 			continue
 		}
 
+		// Keys and values
 		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
-			keys[m[1]] = true
-			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "ALT_KEY_VALUE", m[1], m[2])
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", m[1], m[2])
 			continue
 		}
-
 		if m := reAltKey.FindStringSubmatch(text); m != nil {
-			keys[m[1]] = true
-			fmt.Printf("% 4d  %- 20s  %s\n", line, "ALT_KEY", m[1])
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 10s  @{c}%s\n", "ALT_KEY", m[1])
 			continue
 		}
-
 		if m := reKeyValue.FindStringSubmatch(text); m != nil {
-			keys[m[1]] = true
-			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "KEY_VALUE", m[1], m[2])
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", m[1], m[2])
 			continue
 		}
-
 		if m := reKey.FindStringSubmatch(text); m != nil {
-			keys[m[1]] = true
-			fmt.Printf("% 4d  %- 20s  %s\n", line, "KEY", m[1])
+			addKey(m[1], res.Host)
+			color.Printf("@{|w}%- 10s  @{c}%s\n", "KEY", m[1])
 			continue
 		}
-
 		if m := reIndentedValue.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "INDENTED_VALUE", "", m[1])
+			color.Printf("@{|w}%- 10s  @{c}%- 40s @{w}%s\n", "INDENTED_VALUE", "", m[1])
 			continue
 		}
 
-		fmt.Fprintf(os.Stderr, "% 4d  %- 20s  %s\n", line, "UNKNOWN", text)
+		// Unknown
+		color.Printf("@{|.}%- 10s  @{|.}%s\n", "UNKNOWN", text)
 	}
 
 	fmt.Printf("\n")
+}
+
+func addKey(k, host string) {
+	if _, ok := keys[k]; !ok {
+		keys[k] = host
+	} else if !strings.Contains(keys[k], host) {
+		keys[k] = keys[k] + "  " + host
+	}
 }
