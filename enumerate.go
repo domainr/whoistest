@@ -44,14 +44,13 @@ func main1() error {
 }
 
 var (
-	reEmptyLine      = regexp.MustCompile(`^\s*$`)
-	reElement   = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-	reElementB = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
-
-	jpNotice = `^\[ .+ \]$`
-	deNotice = `^% .*$`
-	updated  = `^<<<.+>>>$`
-	reNotice   = regexp.MustCompile(jpNotice + "|" + deNotice + "|" + updated)
+	reEmptyLine   = regexp.MustCompile(`^\s*$`)
+	reKeyValue    = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
+	reAltKeyValue = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+	jpNotice      = `^\[ .+ \]$`
+	deNotice      = `^% .*$`
+	updated       = `^<<<.+>>>$`
+	reNotice      = regexp.MustCompile(jpNotice + "|" + deNotice + "|" + updated)
 )
 
 func scan(res *whois.Response) {
@@ -75,13 +74,13 @@ func scan(res *whois.Response) {
 			continue
 		}
 
-		if m := reElementB.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "B ELEMENT", m[1], m[2])
+		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "ALT_KEY_VALUE", m[1], m[2])
 			continue
 		}
 
-		if m := reElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "ELEMENT", m[1], m[2])
+		if m := reKeyValue.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "KEY_VALUE", m[1], m[2])
 			continue
 		}
 
