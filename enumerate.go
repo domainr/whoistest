@@ -71,21 +71,21 @@ func scan(res *whois.Response) {
 		}
 
 		if m := notice.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 18s  %s\n", line, "NOTICE", m[0])
+			fmt.Printf("% 4d  %- 20s  %s\n", line, "NOTICE", m[0])
 			continue
 		}
 
 		if m := bracketElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "B ELEMENT", m[1], m[2])
+			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "B ELEMENT", m[1], m[2])
 			continue
 		}
 
 		if m := colonElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "ELEMENT", m[1], m[2])
+			fmt.Printf("% 4d  %- 20s  %- 30s %s\n", line, "ELEMENT", m[1], m[2])
 			continue
 		}
 
-		fmt.Fprintf(os.Stderr, "% 4d  %- 18s  %s\n", line, "UNKNOWN", text)
+		fmt.Fprintf(os.Stderr, "% 4d  %- 20s  %s\n", line, "UNKNOWN", text)
 	}
 	fmt.Printf("\n")
 }
