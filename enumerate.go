@@ -149,14 +149,14 @@ func addKey(k, host string) string {
 }
 
 var (
-	reStrip      = regexp.MustCompile(`[\.\(\)]`)
-	reUnderscore = regexp.MustCompile(`\s+|/`)
+	reStrip = regexp.MustCompile(`[[:punct:]]`)
+	reSpace = regexp.MustCompile(`\s+`)
 )
 
 func transformKey(k string) string {
-	// k = strings.TrimSpace(k)
-	// k = strings.ToUpper(k)
-	// k = reStrip.ReplaceAllLiteralString(k, "")
-	// k = reUnderscore.ReplaceAllLiteralString(k, "_")
+	k = strings.ToUpper(k)
+	k = reStrip.ReplaceAllLiteralString(k, " ")
+	k = strings.TrimSpace(k)
+	k = reSpace.ReplaceAllLiteralString(k, "_")
 	return k
 }
