@@ -137,6 +137,7 @@ agrinet.tn
 agro.pl
 ah.cn
 ai
+aichi.jp
 aid.pl
 aig
 aigo
@@ -144,6 +145,7 @@ airbus
 airforce
 airtel
 akdn
+akita.jp
 ak.us
 al
 alcon
@@ -180,6 +182,7 @@ antivirus
 anz
 ao
 aol
+aomori.jp
 apartments
 app
 apple
@@ -503,6 +506,7 @@ chernovtsy.ua
 chesapeake
 chevrolet
 chevy
+chiba.jp
 chi.mp
 chintai
 chi.pro
@@ -574,6 +578,7 @@ co.com
 co.cr
 co.cu
 co.cz
+co.de
 codes
 co.dm
 co.ee
@@ -780,6 +785,7 @@ consulado.st
 consulting
 contact
 contractors
+co.nu
 co.nz
 cooking
 cookingchannel
@@ -1098,6 +1104,7 @@ edu.yu
 edu.za
 ee
 eg
+ehime.jp
 ekloges.cy
 elblag.pl
 elk.pl
@@ -1248,6 +1255,9 @@ ftp.fo
 ftr
 fujitsu
 fujixerox
+fukui.jp
+fukuoka.jp
+fukushima.jp
 fun
 fund
 furniture
@@ -1303,6 +1313,7 @@ gh
 gi
 gift
 gifts
+gifu.jp
 gives
 giving
 gl
@@ -1524,6 +1535,7 @@ gucci
 guge
 guide
 guitars
+gunma.jp
 guru
 gu.us
 gv.ao
@@ -1562,6 +1574,7 @@ hi.cn
 hiiumaa.ee
 hilton
 hiphop
+hiroshima.jp
 hisamitsu
 hitachi
 hi.us
@@ -1576,6 +1589,7 @@ hmg.gb
 hn
 hn.cn
 hockey
+hokkaido.jp
 holdings
 holiday
 home
@@ -1611,9 +1625,11 @@ hu.com
 hughes
 hu.tc
 hyatt
+hyogo.jp
 hyundai
 iaccess.za
 ia.us
+ibaraki.jp
 i.bg
 ibm
 icbc
@@ -1749,6 +1765,7 @@ is
 isa.us
 i.se
 iselect
+ishikawa.jp
 islam
 isla.pr
 ismaili
@@ -1764,6 +1781,7 @@ it.tt
 itv
 ivano-frankivsk.ua
 iveco
+iwate.jp
 iwc
 iwi.nz
 iz.hr
@@ -1814,7 +1832,10 @@ jx.cn
 k12.il
 k12.tr
 k12.vi
+kagawa.jp
+kagoshima.jp
 kalisz.pl
+kanagawa.jp
 karpacz.pl
 kartuzy.pl
 kaszuby.pl
@@ -1857,6 +1878,7 @@ km
 km.ua
 kn
 kobierzyce.pl
+kochi.jp
 koeln
 kolobrzeg.pl
 komatsu
@@ -1880,12 +1902,14 @@ k.se
 ks.ua
 ks.us
 kul.ee
+kumamoto.jp
 kuokgroup
 kutno.pl
 kw
 ky
 kyknet
 kyoto
+kyoto.jp
 ky.us
 kz
 kzn.school.za
@@ -2072,6 +2096,7 @@ mh
 miami
 miasta.pl
 microsoft
+mie.jp
 mielec.pl
 mielno.pl
 mih
@@ -2143,6 +2168,8 @@ mitek
 mi.th
 mitsubishi
 mi.us
+miyagi.jp
+miyazaki.jp
 mk
 mk.ua
 ml
@@ -2231,6 +2258,8 @@ mzansimagic
 na
 nab
 nadex
+nagano.jp
+nagasaki.jp
 nagoya
 naklo.pl
 name
@@ -2252,6 +2281,7 @@ name.tj
 name.tr
 name.tt
 name.vn
+nara.jp
 naspers
 nationwide
 nat.tn
@@ -2442,6 +2472,7 @@ nh.us
 ni
 nico
 nieruchomosci.pl
+niigata.jp
 nike
 nikolaev.ua
 nikon
@@ -2530,7 +2561,10 @@ office
 of.na
 og.ao
 oh.us
+oita.jp
+okayama.jp
 okinawa
+okinawa.jp
 ok.us
 olawa.pl
 olayan
@@ -2554,7 +2588,6 @@ ooo
 open
 opoczno.pl
 opole.pl
-opr
 oracle
 orange
 or.at
@@ -2738,6 +2771,7 @@ or.tz
 or.ug
 or.us
 osaka
+osaka.jp
 o.se
 ostroda.pl
 ostroleka.pl
@@ -3040,6 +3074,8 @@ sa.edu.au
 safe
 safety
 safeway
+saga.jp
+saitama.jp
 sakura
 sale
 salon
@@ -3134,7 +3170,10 @@ shaw
 sh.cn
 shell
 shia
+shiga.jp
 shiksha
+shimane.jp
+shizuoka.jp
 shoes
 shop
 shop.ht
@@ -3344,19 +3383,24 @@ tm.za
 tn
 tn.us
 to
+tochigi.jp
 today
+tokushima.jp
 tokyo
+tokyo.jp
 tools
 top
 toray
 torun.pl
 toshiba
 total
+tottori.jp
 tour
 tourism.pl
 tourism.tn
 tours
 town
+toyama.jp
 toyota
 toys
 tozsde.hu
@@ -3512,6 +3556,7 @@ vu
 vuelos
 wa.au
 wa.edu.au
+wakayama.jp
 walbrzych.pl
 wales
 walmart
@@ -3601,6 +3646,9 @@ xyz
 xz.cn
 yachts
 yahoo
+yamagata.jp
+yamaguchi.jp
+yamanashi.jp
 yamaxun
 yandex
 y.bg
