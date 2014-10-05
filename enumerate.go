@@ -59,14 +59,16 @@ func scan(res *whois.Response) {
 		text := s.Text()
 		
 		if m := colonElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("COLON ELEMENT:   %s: %s\n", m[1], m[2])
+			fmt.Printf("COLON ELEMENT:    %s: %s\n", m[1], m[2])
 			continue
 		}
 		
 		if m := bracketElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("BRACKET ELEMENT: %s: %s\n", m[1], m[2])
+			fmt.Printf("BRACKET ELEMENT:  %s: %s\n", m[1], m[2])
 			continue
 		}
+		
+		fmt.Fprintf(os.Stderr, "UNKNOWN:          %s\n", text)
 	}
 	fmt.Printf("\n")
 }
