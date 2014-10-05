@@ -64,7 +64,7 @@ func main1() error {
 
 var (
 	reEmptyLine   = regexp.MustCompile(`^\s*$`)
-	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]+)`
+	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]{3,40})`
 	reBareKey     = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*$`)
 	reKeyValue    = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*(.*\S)\s*$`)
 	reAltKey      = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*$`)
@@ -76,7 +76,7 @@ var (
 		`^\[ .+ \]$`,        // whois.jprs.jp
 		`^>>>.+<<<$`,        // Database last updated...
 		`^[^\:]+https?\://`, // Line with an URL
-		`^NOTE: |^NOTICE: |^to: `,
+		`^NOTE: |^NOTICE: |^TERMS OF USE: `,
 	}, "|"))
 )
 
