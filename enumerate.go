@@ -43,9 +43,16 @@ func main1() error {
 	return nil
 }
 
-var emptyLine = regexp.MustCompile(`^\s*$`)
-var colonElement = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
-var bracketElement = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+var (
+	emptyLine      = regexp.MustCompile(`^\s*$`)
+	colonElement   = regexp.MustCompile(`^\s*([^\:]*\S)\s*\:\s*(.*\S)\s*$`)
+	bracketElement = regexp.MustCompile(`^\s*\[([^\]]+)\]\s*(.*\S)\s*$`)
+
+	jpNotice = `^\[ .+ \]$`
+	deNotice = `^% .*$`
+	updated  = `^<<<.+>>>$`
+	notice   = regexp.MustCompile(jpNotice + "|" + deNotice + "|" + updated)
+)
 
 func scan(res *whois.Response) {
 	r, err := res.Reader()
@@ -63,17 +70,22 @@ func scan(res *whois.Response) {
 			continue
 		}
 
-		if m := colonElement.FindStringSubmatch(text); m != nil {
-			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "ELEMENT", m[1], m[2])
+		if m := notice.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 18s  %s\n", line, "NOTICE", m[0])
 			continue
 		}
-		
+
 		if m := bracketElement.FindStringSubmatch(text); m != nil {
 			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "B ELEMENT", m[1], m[2])
 			continue
 		}
-		
-		fmt.Fprintf(os.Stderr, "% 4d  %- 18s  %s\n", line, "UNKNOWN",text)
+
+		if m := colonElement.FindStringSubmatch(text); m != nil {
+			fmt.Printf("% 4d  %- 18s  %s: %s\n", line, "ELEMENT", m[1], m[2])
+			continue
+		}
+
+		fmt.Fprintf(os.Stderr, "% 4d  %- 18s  %s\n", line, "UNKNOWN", text)
 	}
 	fmt.Printf("\n")
 }
