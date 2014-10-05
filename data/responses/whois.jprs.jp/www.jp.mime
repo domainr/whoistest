@@ -1,0 +1,54 @@
+MIME-Version: 1.0
+Content-Checksum: 2b914826bfb24b0aacf8f662214d50f71582015a
+Content-Length: 2495
+Content-Type: text/plain; charset=iso-2022-jp
+Fetched-At: 2014-10-04T11:15:51Z
+Host: whois.jprs.jp
+Query: www.jp
+
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+Domain Information: [ドメイン情報]
+[Domain Name]                   WWW.JP
+
+[登録者名]                      電通関西支社
+[Registrant]                    Dentsu,Inc KANSAI
+
+[Name Server]                   dns1.onamae.com
+[Name Server]                   dns2.onamae.com
+[Signing Key]                   
+
+[登録年月日]                    2001/03/26
+[有効期限]                      2015/03/31
+[状態]                          Active
+[最終更新]                      2014/04/01 01:05:12 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          株式会社クロスメディアインフォメーションセンター
+[Name]                          Crossmedia Information Center Inc.
+[Email]                         itoh@cm-ic.jp
+[Web Page]                       
+[郵便番号]                      104-0045
+[住所]                          東京都中央区
+                                築地2-4-10
+                                テンハウス３F
+[Postal Address]                Chuo-ku
+                                2-4-10 Tsukiji
+                                TenHouse 3F
+[電話番号]                      03-3545-0960
+[FAX番号]                       03-3545-0961
+

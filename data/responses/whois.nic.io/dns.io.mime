@@ -1,0 +1,21 @@
+MIME-Version: 1.0
+Content-Checksum: 29c5f53a5e9c41766913ce8d0234afdc44cb8340
+Content-Length: 205
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-04T11:15:41Z
+Host: whois.nic.io
+Query: dns.io
+
+
+Domain : dns.io
+Status : Live
+Expiry : 2015-04-06
+
+NS 1   : ns10.dnsmadeeasy.com
+NS 2   : ns11.dnsmadeeasy.com
+NS 3   : ns12.dnsmadeeasy.com
+NS 4   : ns13.dnsmadeeasy.com
+NS 5   : ns14.dnsmadeeasy.com
+
+
+

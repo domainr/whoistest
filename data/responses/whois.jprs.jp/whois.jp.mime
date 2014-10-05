@@ -1,0 +1,54 @@
+MIME-Version: 1.0
+Content-Checksum: 68dfffd163754b62487d3a56875196f4b653ec0b
+Content-Length: 2607
+Content-Type: text/plain; charset=iso-2022-jp
+Fetched-At: 2014-10-04T11:15:56Z
+Host: whois.jprs.jp
+Query: whois.jp
+
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+Domain Information: [ドメイン情報]
+[Domain Name]                   WHOIS.JP
+
+[登録者名]                      株式会社日本レジストリサービス
+[Registrant]                    Japan Registry Services Co.,Ltd.
+
+[Name Server]                   ns1.jprs.co.jp
+[Name Server]                   ns2.jprs.co.jp
+[Name Server]                   ns3.jprs.co.jp
+[Signing Key]                   
+
+[登録年月日]                    2001/06/02
+[有効期限]                      2015/06/30
+[状態]                          Active
+[最終更新]                      2014/07/01 01:05:11 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          株式会社日本レジストリサービス
+[Name]                          Japan Registry Services Co.,Ltd.
+[Email]                         dom-admin@jprs.co.jp
+[Web Page]                       
+[郵便番号]                      101-0065
+[住所]                          東京都千代田区西神田三丁目8番1号
+                                千代田ファーストビル東館 13F
+[Postal Address]                Chiyoda First Bldg. East 13F,
+                                3-8-1 Nishi-Kanda Chiyoda-ku,
+                                Tokyo 101-0065, JAPAN
+[電話番号]                      03-5215-8451
+[FAX番号]                       03-5215-8452
+

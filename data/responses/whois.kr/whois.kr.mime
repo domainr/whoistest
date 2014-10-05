@@ -1,0 +1,79 @@
+MIME-Version: 1.0
+Content-Checksum: 930656b6fc684209a09812573c4a196ea4c6c53d
+Content-Length: 2567
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2014-10-04T18:28:47Z
+Host: whois.kr
+Query: whois.kr
+
+query : whois.kr
+
+
+# KOREAN(UTF8)
+
+도메인이름                  : whois.kr
+등록인                      : 한국인터넷진흥원
+등록인 주소                 : 서울시 송파구 중대로 109 대동빌딩 한국인터넷진흥원
+등록인 우편번호             : 138803
+책임자                      : 도메인관리자
+책임자 전자우편             : domain-manager@kisa.or.kr
+책임자 전화번호             : 02-405-5014
+등록일                      : 2007. 08. 21.
+최근 정보 변경일            : 2009. 12. 15.
+사용 종료일                 : 9999. 12. 31.
+정보공개여부                : Y
+등록대행자                  : 한국인터넷진흥원(http://www.kisa.kr)
+
+1차 네임서버 정보
+   호스트이름               : ns0.nida.or.kr
+   IP 주소                  : 202.30.50.52
+
+2차 네임서버 정보
+   호스트이름               : ns1.nida.or.kr
+   IP 주소                  : 202.30.50.51
+   호스트이름               : ns2.nida.or.kr
+   IP 주소                  : 61.74.72.161
+   호스트이름               : ns0.nida.or.kr
+   IP 주소                  : 2001:dc5:0:10:202:30:50:52
+
+네임서버 이름이 .kr이 아닌 경우는 IP주소가 보이지 않습니다.
+
+
+# ENGLISH
+
+Domain Name                 : whois.kr
+Registrant                  : Korea Internet & Security Agency
+Registrant Address          : KISA, Daedong-B/D, Jungdaero 109, Songpa-gu, Seoul, Korea
+Registrant Zip Code         : 138803
+Administrative Contact(AC)  : Domain Manager
+AC E-Mail                   : domain-manager@kisa.or.kr
+AC Phone Number             : 02-405-5014
+Registered Date             : 2007. 08. 21.
+Last Updated Date           : 2009. 12. 15.
+Expiration Date             : 9999. 12. 31.
+Publishes                   : Y
+Authorized Agency           : KISA(http://www.kisa.kr)
+
+Primary Name Server
+   Host Name                : ns0.nida.or.kr
+   IP Address               : 202.30.50.52
+
+Secondary Name Server
+   Host Name                : ns1.nida.or.kr
+   IP Address               : 202.30.50.51
+   Host Name                : ns2.nida.or.kr
+   IP Address               : 61.74.72.161
+   Host Name                : ns0.nida.or.kr
+   IP Address               : 2001:dc5:0:10:202:30:50:52
+
+
+상기 정보는 UTF-8 인코딩되어 서비스되고 있습니다.
+EUC-KR 인코딩 서비스는 oldwhois.kisa.or.kr에서 서비스 되고 있습니다.
+The above information is encoded with UTF-8
+EUC-KR encoding WHOIS is being serviced in this URL:oldwhois.kisa.or.kr
+
+
+- KISA/KRNIC Whois Service -
+
+
+

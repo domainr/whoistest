@@ -1,0 +1,62 @@
+MIME-Version: 1.0
+Content-Checksum: 2742c8faa2b9c3fae142ff84f66a9e32da2aabd1
+Content-Length: 1635
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-04T18:48:55Z
+Host: whois.registro.br
+Query: registro.br
+
+
+% Copyright (c) Nic.br
+%  The use of the data below is only permitted as described in
+%  full by the terms of use at http://registro.br/termo/en.html ,
+%  being prohibited its distribution, comercialization or
+%  reproduction, in particular, to use it for advertising or
+%  any similar purpose.
+%  2014-10-04 15:48:56 (BRT -03:00)
+
+domain:      registro.br
+owner:       Núcleo de Inf. e Coord. do Ponto BR - NIC.BR
+ownerid:     005.506.560/0001-36
+responsible: Demi Getschko
+country:     BR
+owner-c:     FAN
+admin-c:     FAN
+tech-c:      FAN
+billing-c:   FAN
+nserver:     a.dns.br  
+nsstat:      20141002 AA
+nslastaa:    20141002
+nserver:     b.dns.br  
+nsstat:      20141002 AA
+nslastaa:    20141002
+nserver:     c.dns.br  
+nsstat:      20141002 AA
+nslastaa:    20141002
+nserver:     d.dns.br  
+nsstat:      20141002 AA
+nslastaa:    20141002
+nserver:     e.dns.br  
+nsstat:      20141002 AA
+nslastaa:    20141002
+dsrecord:    54964 RSASHA1 F98A9B168BE4816B8E2E23771A9E6B79D425906E
+dsstatus:    20140928 DSOK
+dslastok:    20140928
+created:     19990221 #142485
+changed:     20070604
+status:      published
+
+nic-hdl-br:  FAN
+person:      Frederico Augusto de Carvalho Neves
+e-mail:      fneves@registro.br
+created:     19971217
+changed:     20140703
+
+% Security and mail abuse issues should also be addressed to
+% cert.br, http://www.cert.br/, respectivelly to cert@cert.br
+% and mail-abuse@cert.br
+%
+% whois.registro.br accepts only direct match queries. Types
+% of queries are: domain (.br), registrant (tax ID), ticket,
+% provider, contact handle (ID), CIDR block, IP and ASN.
+

@@ -1,0 +1,65 @@
+MIME-Version: 1.0
+Content-Checksum: 647949da4b24c7e745b09fc006fc767e11fb5482
+Content-Length: 1825
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-04T18:48:54Z
+Host: whois.registro.br
+Query: dns.br
+
+
+% Copyright (c) Nic.br
+%  The use of the data below is only permitted as described in
+%  full by the terms of use at http://registro.br/termo/en.html ,
+%  being prohibited its distribution, comercialization or
+%  reproduction, in particular, to use it for advertising or
+%  any similar purpose.
+%  2014-10-04 15:48:55 (BRT -03:00)
+
+domain:      dns.br
+owner:       Núcleo de Inf. e Coord. do Ponto BR - NIC.BR
+ownerid:     005.506.560/0001-36
+responsible: Demi Getschko
+country:     BR
+owner-c:     FAN
+admin-c:     FAN
+tech-c:      FAN
+billing-c:   FAN
+nserver:     a.dns.br 200.160.0.10 2001:12ff::10
+nsstat:      20141003 AA
+nslastaa:    20141003
+nserver:     b.dns.br 200.189.41.10 
+nsstat:      20141003 AA
+nslastaa:    20141003
+nserver:     c.dns.br 200.192.233.10 
+nsstat:      20141003 AA
+nslastaa:    20141003
+nserver:     d.dns.br 200.219.154.10 2001:12f8:4::10
+nsstat:      20141003 AA
+nslastaa:    20141003
+nserver:     e.dns.br 200.229.248.10 2001:12f8:1::10
+nsstat:      20141003 AA
+nslastaa:    20141003
+nserver:     f.dns.br 200.219.159.10 
+nsstat:      20141003 AA
+nslastaa:    20141003
+dsrecord:    943 RSASHA1 1880E0A19BDD1187747214B84A2F50F63AE539DC
+dsstatus:    20141001 DSOK
+dslastok:    20141001
+created:     19980120 #83037
+changed:     20121127
+status:      published
+
+nic-hdl-br:  FAN
+person:      Frederico Augusto de Carvalho Neves
+e-mail:      fneves@registro.br
+created:     19971217
+changed:     20140703
+
+% Security and mail abuse issues should also be addressed to
+% cert.br, http://www.cert.br/, respectivelly to cert@cert.br
+% and mail-abuse@cert.br
+%
+% whois.registro.br accepts only direct match queries. Types
+% of queries are: domain (.br), registrant (tax ID), ticket,
+% provider, contact handle (ID), CIDR block, IP and ASN.
+

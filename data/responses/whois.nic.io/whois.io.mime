@@ -1,0 +1,25 @@
+MIME-Version: 1.0
+Content-Checksum: ae03ec217ec68983690236800b8c8298cce01d28
+Content-Length: 267
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-04T11:15:48Z
+Host: whois.nic.io
+Query: whois.io
+
+
+Domain : whois.io
+Status : Live
+Expiry : 2018-09-11
+
+NS 1   : ns1.dreamhost.com
+NS 2   : ns2.dreamhost.com
+NS 3   : ns3.dreamhost.com
+
+Owner  : Jothan Frakes
+Owner  : Domain Registrant
+Owner  : 313 South 219th Street
+Owner  : Normandy Park
+Owner  : WA
+Owner  : US
+
+

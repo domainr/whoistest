@@ -1,0 +1,40 @@
+MIME-Version: 1.0
+Content-Checksum: 7df22cfc2aa091b546c42dbe5a4693de52f64f4a
+Content-Length: 1841
+Content-Type: text/plain; charset=iso-2022-jp
+Fetched-At: 2014-10-04T11:15:43Z
+Host: whois.jprs.jp
+Query: zx5v7d4v2k50l3pq.jp
+
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+No match!!
+
+JPRS WHOISは、JPRSが管理している以下のドメイン名に関する情報を確認でき
+るサービスです。
+    ・登録されているJPドメイン名
+    ・JPRSを管理レジストラとするgTLD等ドメイン名
+詳しくは http://jprs.jp/about/dom-search/jprs-whois/ を参照してください。
+
+参考: IPアドレスのWHOISサーバ
+   ・JPNIC WHOIS(whois.nic.ad.jp)
+   ・APNIC WHOIS(whois.apnic.net)
+   ・ARIN WHOIS(whois.arin.net)
+   ・RIPE WHOIS(whois.ripe.net)
+   ・LACNIC WHOIS(whois.lacnic.net)
+   ・AfriNIC WHOIS(whois.afrinic.net)
+

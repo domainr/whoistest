@@ -1,0 +1,26 @@
+MIME-Version: 1.0
+Content-Checksum: 80e629ec206ec692f92e0e17f24e0c87dab070ac
+Content-Length: 288
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2014-10-04T11:15:39Z
+Host: whois.nic.io
+Query: google.io
+
+
+Domain : google.io
+Status : Client Updt Lock
+Expiry : 2015-09-30
+
+NS 1   : ns1.google.com
+NS 2   : ns2.google.com
+NS 3   : ns3.google.com
+NS 4   : ns4.google.com
+
+Owner  : DNS Admin
+Owner  : Google Inc.
+Owner  : 1600 Amphitheatre Parkway
+Owner  : Mountain View
+Owner  : CA
+Owner  : US
+
+
