@@ -16,6 +16,10 @@ import (
 	"github.com/domainr/whoistest"
 )
 
+var (
+	keys = make(map[string]bool)
+)
+
 func main() {
 	flag.Parse()
 	if err := main1(); err != nil {
@@ -40,6 +44,12 @@ func main1() error {
 		}
 		scan(res)
 	}
+
+	fmt.Fprintf(os.Stderr, "\n%d unique keys parsed:\n", len(keys))
+	for k, _ := range keys {
+		fmt.Fprintf(os.Stderr, "%s\n", k)
+	}
+
 	return nil
 }
 
@@ -53,7 +63,7 @@ var (
 	deNotice        = `^% .*$`
 	jpNotice        = `^\[ .+ \]$`
 	krNotice        = `^# .*$`
-	updated         = `^<<<.+>>>$`
+	updated         = `^>>>.+<<<$`
 	reNotice        = regexp.MustCompile(
 		deNotice + "|" + jpNotice + "|" + krNotice + "|" + updated)
 )
@@ -80,21 +90,25 @@ func scan(res *whois.Response) {
 		}
 
 		if m := reAltKeyValue.FindStringSubmatch(text); m != nil {
+			keys[m[1]] = true
 			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "ALT_KEY_VALUE", m[1], m[2])
 			continue
 		}
 
 		if m := reAltKey.FindStringSubmatch(text); m != nil {
+			keys[m[1]] = true
 			fmt.Printf("% 4d  %- 20s  %s\n", line, "ALT_KEY", m[1])
 			continue
 		}
 
 		if m := reKeyValue.FindStringSubmatch(text); m != nil {
+			keys[m[1]] = true
 			fmt.Printf("% 4d  %- 20s  %- 40s %s\n", line, "KEY_VALUE", m[1], m[2])
 			continue
 		}
 
 		if m := reKey.FindStringSubmatch(text); m != nil {
+			keys[m[1]] = true
 			fmt.Printf("% 4d  %- 20s  %s\n", line, "KEY", m[1])
 			continue
 		}
@@ -106,5 +120,6 @@ func scan(res *whois.Response) {
 
 		fmt.Fprintf(os.Stderr, "% 4d  %- 20s  %s\n", line, "UNKNOWN", text)
 	}
+
 	fmt.Printf("\n")
 }
