@@ -124,8 +124,8 @@ func scan(res *whois.Response, fn string) {
 			continue
 		}
 
-		// Unknown
-		color.Printf("@{|.}%- 16s  @{|.}%s\n", "UNKNOWN", text)
+		// Text (unknown)
+		color.Printf("@{|.}%- 16s  @{|.}%s\n", "TEXT", text)
 	}
 
 	fmt.Printf("\n")
