@@ -73,8 +73,8 @@ func main1() error {
 var (
 	reEmptyLine   = regexp.MustCompile(`^\s*$`)
 	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]{3,40})`
-	reBareKey     = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*$`)
-	reKeyValue    = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*(.*\S)\s*$`)
+	reBareKey     = regexp.MustCompile(`^[ \t]{0,3}` + reKey + `\s*\:\s*$`)
+	reKeyValue    = regexp.MustCompile(`^[ \t]{0,3}` + reKey + `\s*\:\s*(.*\S)\s*$`)
 	reAltKey      = regexp.MustCompile(`^\[` + reKey + `\]\s*$`)
 	reAltKeyValue = regexp.MustCompile(`^\[` + reKey + `\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
