@@ -57,18 +57,41 @@ func main1() error {
 }
 
 var (
-	reEmptyLine   = regexp.MustCompile(`^\s*$`)
+	reEmptyLine = regexp.MustCompile(`^\s*$`)
+
 	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]{3,40})`
 	reBareKey     = regexp.MustCompile(`^[ \t]{0,3}` + reKey + `\s*\:\s*$`)
 	reKeyValue    = regexp.MustCompile(`^[ \t]{0,3}` + reKey + `\s*\:\s*(.*\S)\s*$`)
 	reAltKey      = regexp.MustCompile(`^\[` + reKey + `\]\s*$`)
 	reAltKeyValue = regexp.MustCompile(`^\[` + reKey + `\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
-	reNotice      = regexp.MustCompile(strings.Join([]string{
-		`^%`,         // whois.de, whois.registro.br
-		`^# `,        // whois.kr
-		`^\[ .+ \]$`, // whois.jprs.jp
-		`^>>>.+<<<$`, // Database last updated...
+
+	reUnavailable = regexp.MustCompile(strings.Join([]string{
+		`^Above domain name is not available for registration\.$`,
+	}, "|"))
+
+	reReserved = regexp.MustCompile(strings.Join([]string{
+		`^Domain reserved$`,
+	}, "|"))
+
+	reNotFound = regexp.MustCompile(strings.Join([]string{
+		`^No match\!\!$`,
+		`^NOT FOUND$`,
+		`^no matching record.$`,
+		`^Not found\: .+$`,
+		`^No match for "([^"]+)"\.$`,
+		`^% No match for domain "([^"]+)"$`,
+		`^% No entries found for query "([^"]+)"\.$`,
+		`^Domain (\S+) is available for purchase$`,
+		`^%% No entries found in the .+ Database\.$`,
+		`^Above domain name is not registered to [^\.]+\.$`,
+	}, "|"))
+
+	reNotice = regexp.MustCompile(strings.Join([]string{
+		`^%`,                // whois.de, whois.registro.br
+		`^# `,               // whois.kr
+		`^\[ .+ \]$`,        // whois.jprs.jp
+		`^>>>.+<<<$`,        // Database last updated...
 		`^[^\:]+https?\://`, // Line with an URL
 		`^NOTE: |^NOTICE: |^TERMS OF USE: `,
 	}, "|"))
@@ -92,30 +115,46 @@ func scan(res *whois.Response, fn string) {
 		// Get next line
 		text := s.Text()
 
-		// Notices and empty lines
+		// Empty lines
 		if reEmptyLine.MatchString(text) {
 			color.Printf("@{|w}EMPTY\n")
 			continue
 		}
+
+		// Status messages
+		if m := reNotFound.FindStringSubmatch(text); m != nil {
+			color.Printf("@{|y}%- 16s  %s\n", "NOT_FOUND", text)
+			continue
+		}
+		if m := reUnavailable.FindStringSubmatch(text); m != nil {
+			color.Printf("@{|y}%- 16s  %s\n", "UNAVAILABLE", text)
+			continue
+		}
+		if m := reReserved.FindStringSubmatch(text); m != nil {
+			color.Printf("@{|y}%- 16s  %s\n", "UNAVAILABLE", text)
+			continue
+		}
+
+		// Notices
 		if m := reNotice.FindStringSubmatch(text); m != nil {
 			color.Printf("@{|w}%- 16s  %s\n", "NOTICE", text)
 			continue
 		}
 
 		// Keys and values
-		if m := reAltKeyValue.FindStringSubmatch(text); m != nil && known(m[1], fn, line + off) {
+		if m := reAltKeyValue.FindStringSubmatch(text); m != nil && known(m[1], fn, line+off) {
 			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "ALT_KEY_VALUE", m[1], m[2])
 			continue
 		}
-		if m := reAltKey.FindStringSubmatch(text); m != nil && known(m[1], fn, line + off) {
+		if m := reAltKey.FindStringSubmatch(text); m != nil && known(m[1], fn, line+off) {
 			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_ALT_KEY", m[1])
 			continue
 		}
-		if m := reKeyValue.FindStringSubmatch(text); m != nil && known(m[1], fn, line + off) {
+		if m := reKeyValue.FindStringSubmatch(text); m != nil && known(m[1], fn, line+off) {
 			color.Printf("@{|w}%- 16s  @{c}%- 40s @{w}%s\n", "KEY_VALUE", m[1], m[2])
 			continue
 		}
-		if m := reBareKey.FindStringSubmatch(text); m != nil && known(m[1], fn, line + off) {
+		if m := reBareKey.FindStringSubmatch(text); m != nil && known(m[1], fn, line+off) {
 			color.Printf("@{|w}%- 16s  @{c}%s\n", "BARE_KEY", m[1])
 			continue
 		}
