@@ -75,8 +75,8 @@ var (
 	reKey         = `([^,a-z\:\],][^\:\]]{0,39}\S|[a-z-]{3,40})`
 	reBareKey     = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*$`)
 	reKeyValue    = regexp.MustCompile(`^\s*` + reKey + `\s*\:\s*(.*\S)\s*$`)
-	reAltKey      = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*$`)
-	reAltKeyValue = regexp.MustCompile(`^\s*\[` + reKey + `\]\s*(.*\S)\s*$`)
+	reAltKey      = regexp.MustCompile(`^\[` + reKey + `\]\s*$`)
+	reAltKeyValue = regexp.MustCompile(`^\[` + reKey + `\]\s*(.*\S)\s*$`)
 	reBareValue   = regexp.MustCompile(`^      \s+(.*\S)\s*$`)
 	reNotice      = regexp.MustCompile(strings.Join([]string{
 		`^%`,                // whois.de, whois.registro.br
