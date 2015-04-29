@@ -2,7 +2,6 @@ package whoistest
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/domainr/whois"

@@ -15,10 +15,10 @@ import (
 	"strings"
 	"sync"
 
-	"code.google.com/p/go.net/idna"
 	"github.com/domainr/whois"
 	"github.com/domainr/whoistest"
 	"github.com/zonedb/zonedb"
+	"golang.org/x/net/idna"
 )
 
 var (
