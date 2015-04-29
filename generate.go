@@ -12,11 +12,13 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
+	"strings"
 	"sync"
 
 	"code.google.com/p/go.net/idna"
 	"github.com/domainr/whois"
 	"github.com/domainr/whoistest"
+	"github.com/zonedb/zonedb"
 )
 
 var (
@@ -26,6 +28,7 @@ var (
 	concurrency    int
 	zones          []string
 	prefixes       []string
+	firstLabel     = regexp.MustCompile(`^[^\.]+\.`)
 	_, _file, _, _ = runtime.Caller(0)
 	_dir           = filepath.Dir(_file)
 )
@@ -48,36 +51,33 @@ func main() {
 }
 
 func main1() error {
-	var err error
-	zones, err = readLines("zones.txt")
-	if err != nil {
-		return err
-	}
-	prefixes, err = readLines("prefixes.txt")
-	if err != nil {
-		return err
-	}
-
-	// Quick for debugging?
-	if quick {
-		fmt.Fprintf(os.Stderr, "Quick mode enabled\n")
-		zones = []string{"com", "net", "org", "co", "io", "nr", "kr", "jp", "de", "in"}
-	}
-
-	// One zone?
-	if oneZone != "" {
+	var zones []string
+	switch {
+	case oneZone != "":
 		fmt.Fprintf(os.Stderr, "Querying single zone: %s\n", oneZone)
 		zones = []string{oneZone}
+
+	case quick:
+		zones = strings.Fields(`com net org co io nr kr jp de in`)
+		fmt.Fprintf(os.Stderr, "Quick mode enabled, operating on %d zones\n", len(zones))
+
+	default:
+		for _, z := range zonedb.Zones {
+			zones = append(zones, z.Domain)
+		}
 	}
 
-	firstLabel := regexp.MustCompile(`^[^\.]+\.`)
+	prefixes, err := readLines("prefixes.txt")
+	if err != nil {
+		return err
+	}
 
 	domains := make(map[string]bool, len(zones)*len(prefixes))
 	for _, zone := range zones {
 		for _, prefix := range prefixes {
 			domain := prefix + "." + zone
 			domains[domain] = true
-			host, err := whois.Resolve(domain)
+			host, err := whois.Server(domain)
 			if err == nil {
 				parent := firstLabel.ReplaceAllLiteralString(host, "")
 				if _, ok := domains[parent]; !ok && parent != "" {
@@ -134,7 +134,7 @@ func main1() error {
 			if v {
 				fmt.Fprintf(os.Stderr, "Fetching %s from %s\n", req.Query, req.Host)
 			}
-			res, err = req.Fetch()
+			res, err = whois.DefaultClient.Fetch(req)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error fetching whois for %s: %s\n", req.Query, err)
 				return

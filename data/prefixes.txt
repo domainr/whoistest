@@ -1,8 +1,5 @@
 # Domains possibly registered
-dns
 nic
-www
-whois
 google
 
 # Domains unlikely registered
