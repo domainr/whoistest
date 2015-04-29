@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: cb25868ccc7c96649924df0a6626e5ba878540f3
-Content-Length: 2813
+Content-Checksum: e017a8e1e8c96bf21abb9e5afbfa5b1dbd9414be
+Content-Length: 2812
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2014-10-04T11:15:49Z
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.denic.de
 Query: denic.de
 
@@ -44,11 +44,11 @@ Query: denic.de
 
 Domain: denic.de
 Nserver: ns1.denic.de 2a02:568:121:6:2:0:0:2 81.91.170.1
-Nserver: ns2.denic.de 193.171.255.36
+Nserver: ns2.denic.de 78.104.145.26
 Nserver: ns3.denic.de 81.91.173.19
 Dnskey: 257 3 8 AwEAAb/xrM2MD+xm84YNYby6TxkMaC6PtzF2bB9WBB7ux7iqzhViob4GKvQ6L7CkXjyAxfKbTzrdvXoAPpsAPW4pkThReDAVp3QxvUKrkBM8/uWRF3wpaUoPsAHm1dbcL9aiW3lqlLMZjDEwDfU6lxLcPg9d14fq4dc44FvPx6aYcymkgJoYvR6P1wECpxqlEAR2K1cvMtqCqvVESBQV/EUtWiALNuwR2PbhwtBWJd+e8BdFI7OLkit4uYYux6Yu35uyGQ==
 Status: connect
-Changed: 2014-09-19T14:37:01+02:00
+Changed: 2015-02-11T14:56:06+01:00
 
 [Tech-C]
 Type: PERSON

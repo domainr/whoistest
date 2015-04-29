@@ -1,27 +1,28 @@
 MIME-Version: 1.0
-Content-Checksum: 7174ab00650708343b11ac9faaff5baef7aa5ae5
-Content-Length: 3385
+Content-Checksum: 52ac4f96791db413b07e85762bbccc08f2e07716
+Content-Length: 3845
 Content-Type: text/plain; charset=windows-1252
-Fetched-At: 2014-10-04T22:15:23Z
+Fetched-At: 2015-04-29T01:31:42Z
 Host: whois.pir.org
 Query: pir.org
 
 Domain Name:PIR.ORG
 Domain ID: D96207-LROR
 Creation Date: 1996-02-18T05:00:00Z
-Updated Date: 2010-03-26T16:53:27Z
-Registry Expiry Date: 2015-02-19T05:00:00Z
+Updated Date: 2015-02-20T01:41:55Z
+Registry Expiry Date: 2016-02-19T05:00:00Z
 Sponsoring Registrar:GoDaddy.com, LLC (R91-LROR)
 Sponsoring Registrar IANA ID: 146
 WHOIS Server: 
 Referral URL: 
-Domain Status: serverDeleteProhibited
-Domain Status: serverTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: serverDeleteProhibited -- http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited -- http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited -- http://www.icann.org/epp#serverUpdateProhibited
 Registrant ID:GODA-02131674
 Registrant Name:Registration Private
 Registrant Organization:Domains By Proxy, LLC
 Registrant Street: DomainsByProxy.com
+Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
 Registrant City:Scottsdale
 Registrant State/Province:Arizona
 Registrant Postal Code:85260
@@ -35,6 +36,7 @@ Admin ID:GODA-22131674
 Admin Name:Registration Private
 Admin Organization:Domains By Proxy, LLC
 Admin Street: DomainsByProxy.com
+Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
 Admin City:Scottsdale
 Admin State/Province:Arizona
 Admin Postal Code:85260
@@ -48,6 +50,7 @@ Tech ID:GODA-12131674
 Tech Name:Registration Private
 Tech Organization:Domains By Proxy, LLC
 Tech Street: DomainsByProxy.com
+Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
 Tech City:Scottsdale
 Tech State/Province:Arizona
 Tech Postal Code:85260
@@ -84,6 +87,6 @@ Digest Type 2:2
 Digest 2:6CDE2DE97F1D07B23134440F19682E7519ADDAE180E20B1B1EC52E7F58B2831D
 DS Maximum Signature Life 2:1814400 seconds
 
-Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy. For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
 
 

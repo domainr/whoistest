@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 80e629ec206ec692f92e0e17f24e0c87dab070ac
-Content-Length: 288
+Content-Checksum: 69f9aaa2977d6f0fcd9dbced6dadba2570f3b968
+Content-Length: 414
 Content-Type: text/plain; charset=windows-1252
-Fetched-At: 2014-10-04T11:15:39Z
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.nic.io
 Query: google.io
 
@@ -23,4 +23,6 @@ Owner  : Mountain View
 Owner  : CA
 Owner  : US
 
+Check for 'google.ac' --- http://www.nic.ac/go/whois/google.ac
+Check for 'google.sh' --- http://www.nic.sh/go/whois/google.sh
 

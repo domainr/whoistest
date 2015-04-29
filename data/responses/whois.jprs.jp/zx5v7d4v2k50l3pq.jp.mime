@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 7df22cfc2aa091b546c42dbe5a4693de52f64f4a
-Content-Length: 1841
-Content-Type: text/plain; charset=iso-2022-jp
-Fetched-At: 2014-10-04T11:15:43Z
+Content-Checksum: 2d4e6fdda1fd350167d3d99b753383d9b10f57d9
+Content-Length: 933
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.jprs.jp
 Query: zx5v7d4v2k50l3pq.jp
 
@@ -10,31 +10,20 @@ Query: zx5v7d4v2k50l3pq.jp
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
 No match!!
 
-JPRS WHOIS$B$O!"(BJPRS$B$,4IM}$7$F$$$k0J2<$N%I%a%$%sL>$K4X$9$k>pJs$r3NG'$G$-(B
-$B$k%5!<%S%9$G$9!#(B
-    $B!&EPO?$5$l$F$$$k(BJP$B%I%a%$%sL>(B
-    $B!&(BJPRS$B$r4IM}%l%8%9%H%i$H$9$k(BgTLD$BEy%I%a%$%sL>(B
-$B>\$7$/$O(B http://jprs.jp/about/dom-search/jprs-whois/ $B$r;2>H$7$F$/$@$5$$!#(B
+JPRS WHOISは、JPRSが管理している以下のドメイン名に関する情報を確認でき
+るサービスです。
+    ・登録されているJPドメイン名
+    ・JPRSを管理レジストラとするgTLD等ドメイン名
+詳しくは http://jprs.jp/about/dom-search/jprs-whois/ を参照してください。
 
-$B;29M(B: IP$B%"%I%l%9$N(BWHOIS$B%5!<%P(B
-   $B!&(BJPNIC WHOIS(whois.nic.ad.jp)
-   $B!&(BAPNIC WHOIS(whois.apnic.net)
-   $B!&(BARIN WHOIS(whois.arin.net)
-   $B!&(BRIPE WHOIS(whois.ripe.net)
-   $B!&(BLACNIC WHOIS(whois.lacnic.net)
-   $B!&(BAfriNIC WHOIS(whois.afrinic.net)
+参考: IPアドレスのWHOISサーバ
+   ・JPNIC WHOIS(whois.nic.ad.jp)
+   ・APNIC WHOIS(whois.apnic.net)
+   ・ARIN WHOIS(whois.arin.net)
+   ・RIPE WHOIS(whois.ripe.net)
+   ・LACNIC WHOIS(whois.lacnic.net)
+   ・AfriNIC WHOIS(whois.afrinic.net)
 

@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: a3a5ed470cd5d98861f74b87965a4118103ba67d
-Content-Length: 1987
+Content-Checksum: 08aee8224b796a41432a6c433adfc0256349fb05
+Content-Length: 2066
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2014-10-04T18:28:48Z
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.kr
 Query: google.kr
 
@@ -20,9 +20,10 @@ query : google.kr
 책임자 전화번호             : 82.25319000
 등록일                      : 2007. 03. 02.
 최근 정보 변경일            : 2010. 10. 04.
-사용 종료일                 : 2015. 03. 02.
+사용 종료일                 : 2016. 03. 02.
 정보공개여부                : Y
 등록대행자                  : (주)후이즈(http://whois.co.kr)
+DNSSEC                      : 미서명
 
 1차 네임서버 정보
    호스트이름               : ns1.google.com
@@ -44,9 +45,10 @@ AC E-Mail                   : dns-admin@google.com
 AC Phone Number             : 82.25319000
 Registered Date             : 2007. 03. 02.
 Last Updated Date           : 2010. 10. 04.
-Expiration Date             : 2015. 03. 02.
+Expiration Date             : 2016. 03. 02.
 Publishes                   : Y
 Authorized Agency           : Whois Corp.(http://whois.co.kr)
+DNSSEC                      : unsigned
 
 Primary Name Server
    Host Name                : ns1.google.com

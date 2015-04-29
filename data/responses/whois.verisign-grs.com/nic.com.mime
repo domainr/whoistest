@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: f8bf35b6dc33401eacc196525538024402296607
-Content-Length: 4426
+Content-Checksum: b6b914346fdb2c34ad263e1176e428fdbb052f56
+Content-Length: 4640
 Content-Type: text/plain; charset=iso-8859-1
-Fetched-At: 2014-09-29T14:19:19+02:00
+Fetched-At: 2015-04-29T01:31:45Z
 Host: whois.verisign-grs.com
 Query: nic.com
 
@@ -68,17 +68,18 @@ for detailed information.
 
    Domain Name: NIC.COM
    Registrar: NETWORK SOLUTIONS, LLC.
+   Sponsoring Registrar IANA ID: 2
    Whois Server: whois.networksolutions.com
    Referral URL: http://networksolutions.com
    Name Server: NS1.ISPNETINC.NET
    Name Server: NS2.ISPNETINC.NET
    Name Server: NS3.ISPNETINC.NET
-   Status: clientTransferProhibited
-   Updated Date: 08-feb-2014
+   Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+   Updated Date: 09-feb-2015
    Creation Date: 07-feb-1994
-   Expiration Date: 08-feb-2024
+   Expiration Date: 08-feb-2025
 
->>> Last update of whois database: Mon, 29 Sep 2014 12:19:05 UTC <<<
+>>> Last update of whois database: Wed, 29 Apr 2015 01:31:25 GMT <<<
 
 NOTICE: The expiration date displayed in this record is the date the 
 registrar's sponsorship of the domain name registration in the registry is 
@@ -113,3 +114,6 @@ reserves the right to modify these terms at any time.
 
 The Registry database contains ONLY .COM, .NET, .EDU domains and
 Registrars.
+
+For more information on Whois status codes, please visit 
+https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

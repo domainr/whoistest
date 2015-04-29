@@ -1,0 +1,185 @@
+MIME-Version: 1.0
+Content-Checksum: 35ff432c8a57deb79d5c1eea1ebbaa7da2bf691e
+Content-Length: 5688
+Content-Type: text/html; charset=windows-1252
+Fetched-At: 2015-04-29T01:31:47Z
+Host: www.cenpac.net.nr
+Query: zx5v7d4v2k50l3pq.nr
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>.NR Whois</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<head>
+<style type="text/css"><!--
+body {
+  font-family: verdana,arial,sans-serif;
+  font-size: 16px;
+  color: #000000;
+  background: #ffffff url("/bkgrnd.jpg");
+  layer-background-color: #ffffff;
+  margin:0; padding:0px;
+}
+p {
+  font-family: verdana,arial,sans-serif;
+  font-size: 16px;
+  color: #000000;
+  layer-background-color: #ffffff;
+}
+a.m:link, a.m:visited, a.m:active {
+  font-family: verdana,arial,sans-serif;
+  text-decoration:none; font-size: 12px;
+  color:#ffffff; background:transparent;
+}
+a.m:hover {
+  font-family: verdana,arial,sans-serif;
+  text-decoration:none; font-size: 12px;
+  color:#ffffff; background:#000080;
+}
+a.ml:link, a.ml:visited, a.ml:active, a.ml:hover {
+  font-family: verdana,arial,sans-serif;
+  text-decoration:none; font-size: 12px;
+  color:#ffffff; background:transparent;
+}
+.menuLabel {
+  position:absolute; visibility:hidden; overflow:hidden;
+  font-family: verdana,arial,sans-serif; font-size: 12px; font-weight:bold;
+  color:#ffffff; background: #0000DD; layer-background-color: #0000DD;
+  width:140px; height:20px; clip:rect(0,130,20,0); margin:0; padding:2px;
+}
+.menuBox {
+  position:absolute; visibility:hidden; overflow:hidden;
+  font-family: verdana,arial,sans-serif; font-size: 12px;
+  color:#ffffff; background: #0000DD; layer-background-color: #0000DD;
+  width:225px; padding:2px; line-height:1.3em;
+  border:1px solid #0000DD;
+}
+--></style>
+<script type="text/javascript" language="javascript" src="/java/cbe_core.js"></script>
+<script type="text/javascript" language="javascript" src="/java/cbe_event.js"></script>
+<script type="text/javascript" language="javascript"><!--
+
+var menuCount=2, menuAnchor, menuArray, activeMenu=1, menuOpen=false, activeColor='#000080', inactiveColor='#0000dd';
+function windowOnload()
+{
+  menuAnchor = cbeGetElementById('menuAnchor').cbe;
+  menuArray = new Array();
+  window.cbe.addEventListener("resize", resizeListener);
+  document.cbe.addEventListener("mousemove", menuHide);
+  setTimeout("init()", 250);
+}
+
+function resizeListener(e) {
+  init();
+}
+
+function init() {
+  var i, menuX, menuY, menuLabel;
+  menuX=menuAnchor.pageX();
+  menuY=menuAnchor.pageY();
+  for (i = 1; i <= menuCount; ++i) {
+    menuLabel = cbeGetElementById('menuLabel'+i).cbe;
+    menuLabel.zIndex(1);
+    menuLabel.resizeTo(130,20);
+    menuLabel.moveTo(menuX, menuY);
+    menuLabel.show();
+    menuArray[i] = cbeGetElementById('menu'+i).cbe;
+    menuArray[i].moveTo(menuX, menuY + menuLabel.height());
+    menuArray[i].menuLabel = menuLabel;
+    menuArray[i].zIndex(2);
+    menuX += menuLabel.width();
+  }
+}
+
+function menuShow(e,mn)
+{
+  if (mn == activeMenu && menuOpen) return;
+  menuArray[activeMenu].hide()
+  for (i = 1; i <= menuCount; ++i) {
+    menuArray[i].menuLabel.background(inactiveColor);
+  }
+  menuArray[mn].show();
+  menuArray[mn].menuLabel.background(activeColor);
+  activeMenu = mn;
+  menuOpen = true;
+}
+
+function menuHide(e)
+{
+  if (!menuOpen) return;
+  var x = e.pageX;
+  var y = e.pageY;
+  if (!menuArray[activeMenu].contains(x,y,-2,0,0,0) && !menuArray[activeMenu].menuLabel.contains(x,y,0,20,0,0)) {
+    menuArray[activeMenu].hide();
+    menuArray[activeMenu].menuLabel.background(inactiveColor);
+    menuOpen = false;
+  }
+}
+
+//--></script>
+</head>
+<!-- Definition of the menus -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#0000DD" bordercolor="#000000">
+<tr>
+<td nowrap height="25" ALIGN="left">
+<div id='menuAnchor'>&nbsp;</div>
+</td>
+<td nowrap height="20" ALIGN="Right">&nbsp;</td>
+</tr>
+</table>
+
+
+<div id='menuLabel1' class='menuLabel'><a class='ml' href="/index.html" onmouseover="menuShow(event,1)"><img src="/logo.png" alt="CENPACNET" border="0" align="left"></a></div>
+<div id='menu1' class='menuBox'>
+<a class="m" href="/squirrelmail">Check your mail</a><br>
+<a class="m" href="/announcements.htm">Announcements</a><br>
+</div>
+
+<div id='menuLabel2' class='menuLabel'><a class='ml' href="/dns/index.html" onmouseover="menuShow(event,2)">| .NR Registry</a></div>
+<div id='menu2' class='menuBox'>
+  <a class="m" href="/dns/help.html">HELP</a><br>
+  <a class="m" href="/dns/index.html">Pricing and Information</a><br>
+  <a class="m" href="/dns/terms.html">Terms & Conditions</a><br>
+  <a class="m" href="/dns/dispute.html">Dispute Resolution</a><br>
+  <a class="m" href="/dns/whois.html">Query Domains</a><br>
+  <a class="m" href="/dns/whoislist.html">List Domains</a><br>
+  <a class="m" href="/dns/contact.html">Query Contacts</a><br>
+  <a class="m" href="/dns/contactlist.html">List Contacts</a><br>
+  <a class="m" href="/dns/contactmodif.html">New Contact</a><br>
+  <a class="m" href="/dns/domreg.html">*Register a New Domain*</a><br>
+</div>
+
+<!-- End of Menu Definition -->
+
+<h1 align="center">.NR Whois</h1>
+<hr>
+<form method="GET" action="whois.html">Domain: <input type="text" size="20" name="subdomain" value="zx5v7d4v2k50l3pq" />&nbsp;.&nbsp;<select name="tld"><option value="info.nr" >info.nr</option><option value="net.nr" >net.nr</option><option value="org.nr" >org.nr</option><option value="biz.nr" >biz.nr</option><option value="com.nr" >com.nr</option><option value="nr" selected="selected">nr</option></select><input type="submit" value="Submit" name="whois"></p></form><hr>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

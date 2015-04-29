@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: f305406dc29c508c52140b05c4430d2aea8cac73
-Content-Length: 5604
+Content-Checksum: 364fe73e12697b33a7adcadd3e4eb97dca44310f
+Content-Length: 5708
 Content-Type: text/plain; charset=iso-8859-1
-Fetched-At: 2014-10-03T16:26:56Z
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.nic.co
 Query: nic.co
 
@@ -12,7 +12,7 @@ Sponsoring Registrar:                        RESTRICTED AND RESERVED NAMES .COIN
 Sponsoring Registrar IANA ID:                672943168
 Registrar URL (registration services):       www.cointernet.com.co
 Domain Status:                               serverTransferProhibited
-Domain Status:                               inactive
+Domain Status:                               expired
 Variant:                                     NIC.CO
 Registrant ID:                               RESTRICTEDNAME
 Registrant Name:                             Restricted and Reserved Names .CO Internet SAS
@@ -50,17 +50,19 @@ Technical Contact Country:                   Colombia
 Technical Contact Country Code:              CO
 Technical Contact Phone Number:              +571.6169916
 Technical Contact Email:                     soporte@cointernet.com.co
+Name Server:                                 NS1.PARKCO1.NEUSTAR.BIZ
+Name Server:                                 NS2.PARKCO1.NEUSTAR.BIZ
 Created by Registrar:                        INJECTCSR
-Last Updated by Registrar:                   RESTRICTED AND RESERVED NAMES .COINTERNET
+Last Updated by Registrar:                   BATCHCSR
 Domain Registration Date:                    Fri Apr 23 09:12:47 GMT 2010
 Domain Expiration Date:                      Wed Apr 22 23:59:59 GMT 2015
-Domain Last Updated Date:                    Fri Apr 25 16:43:54 GMT 2014
+Domain Last Updated Date:                    Tue Apr 28 17:03:55 GMT 2015
 Registrar Fields
 ----------------
 RRC:                                         RESTRICTED-A
 DNSSEC:                                      false
 
->>>> Whois database was last updated on: Fri Oct 03 16:23:13 GMT 2014 <<<<
+>>>> Whois database was last updated on: Wed Apr 29 01:25:53 GMT 2015 <<<<
 .CO Internet, S.A.S., the Administrator for .CO, has collected this
 information for the WHOIS database through Accredited Registrars.  
 This information is provided to you for informational purposes only 

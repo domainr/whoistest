@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 9f6cd4b610b07ae47e15310844bd688d249b2bd7
-Content-Length: 2510
-Content-Type: text/plain; charset=iso-2022-jp
-Fetched-At: 2014-10-04T11:15:50Z
+Content-Checksum: 000d66c5521925fdfa799e4876c2ae6cfccc57fc
+Content-Length: 1592
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2015-04-29T01:31:42Z
 Host: whois.jprs.jp
 Query: google.jp
 
@@ -10,22 +10,11 @@ Query: google.jp
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
+Domain Information: [ドメイン情報]
 [Domain Name]                   GOOGLE.JP
 
-[$BEPO?<TL>(B]                      Google Inc.
+[登録者名]                      Google Inc.
 [Registrant]                    Google Inc.
 
 [Name Server]                   ns1.google.com
@@ -34,23 +23,23 @@ Domain Information: [$B%I%a%$%s>pJs(B]
 [Name Server]                   ns4.google.com
 [Signing Key]                   
 
-[$BEPO?G/7nF|(B]                    2005/05/30
-[$BM-8z4|8B(B]                      2015/05/31
-[$B>uBV(B]                          Active
-[$B:G=*99?7(B]                      2014/06/01 01:05:11 (JST)
+[登録年月日]                    2005/05/30
+[有効期限]                      2015/05/31
+[状態]                          Active
+[最終更新]                      2014/06/01 01:05:11 (JST)
 
-Contact Information: [$B8x3+O"MmAk8}(B]
-[$BL>A0(B]                          Google Inc.
+Contact Information: [公開連絡窓口]
+[名前]                          Google Inc.
 [Name]                          Google Inc.
 [Email]                         dns-admin@google.com
 [Web Page]                       
-[$BM9JXHV9f(B]                      94043
-[$B=;=j(B]                          Mountain View
+[郵便番号]                      94043
+[住所]                          Mountain View
                                 1600 Amphitheatre Parkway
                                 US
 [Postal Address]                Mountain View
                                 1600 Amphitheatre Parkway
                                 US
-[$BEEOCHV9f(B]                      16502530000
-[FAX$BHV9f(B]                       16502530001
+[電話番号]                      16502530000
+[FAX番号]                       16502530001
 

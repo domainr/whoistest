@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: cfb4f3b815c9da571ec573dc3133a709e00d573e
-Content-Length: 3147
+Content-Checksum: 374676441d4c7033f5c88a6e0e8fb1e404c90c07
+Content-Length: 3547
 Content-Type: text/plain; charset=iso-8859-1
-Fetched-At: 2014-09-29T12:26:07Z
+Fetched-At: 2015-04-29T01:31:45Z
 Host: whois.verisign-grs.com
 Query: verisign-grs.com
 
@@ -15,8 +15,9 @@ for detailed information.
 
    Domain Name: VERISIGN-GRS.COM
    Registrar: CSC CORPORATE DOMAINS, INC.
+   Sponsoring Registrar IANA ID: 299
    Whois Server: whois.corporatedomains.com
-   Referral URL: http://www.cscglobal.com
+   Referral URL: http://www.cscglobal.com/global/web/csc/digital-brand-services
    Name Server: A2.NSTLD.COM
    Name Server: C2.NSTLD.NET
    Name Server: D2.NSTLD.NET
@@ -28,15 +29,15 @@ for detailed information.
    Name Server: K2.NSTLD.NET
    Name Server: L2.NSTLD.COM
    Name Server: M2.NSTLD.NET
-   Status: clientTransferProhibited
-   Status: serverDeleteProhibited
-   Status: serverTransferProhibited
-   Status: serverUpdateProhibited
+   Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+   Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+   Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+   Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
    Updated Date: 22-may-2014
    Creation Date: 08-sep-2000
    Expiration Date: 08-sep-2015
 
->>> Last update of whois database: Mon, 29 Sep 2014 12:25:51 UTC <<<
+>>> Last update of whois database: Wed, 29 Apr 2015 01:31:25 GMT <<<
 
 NOTICE: The expiration date displayed in this record is the date the 
 registrar's sponsorship of the domain name registration in the registry is 
@@ -71,3 +72,6 @@ reserves the right to modify these terms at any time.
 
 The Registry database contains ONLY .COM, .NET, .EDU domains and
 Registrars.
+
+For more information on Whois status codes, please visit 
+https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

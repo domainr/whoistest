@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 146559dab6afd7548c7cbb3268e92b9f6be39c85
-Content-Length: 2897
-Content-Type: text/plain; charset=iso-2022-jp
-Fetched-At: 2014-10-04T11:15:46Z
+Content-Checksum: 739382d4b273bc8495b5d5cbacaf58112168ec20
+Content-Length: 1998
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2015-04-29T01:31:43Z
 Host: whois.jprs.jp
 Query: jprs.jp
 
@@ -10,50 +10,39 @@ Query: jprs.jp
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
+Domain Information: [ドメイン情報]
 [Domain Name]                   JPRS.JP
 
-[$BEPO?<TL>(B]                      $B3t<02q<RF|K\%l%8%9%H%j%5!<%S%9(B
+[登録者名]                      株式会社日本レジストリサービス
 [Registrant]                    Japan Registry Services Co.,Ltd.
 
 [Name Server]                   ns1.jprs.jp
 [Name Server]                   ns2.jprs.jp
 [Name Server]                   ns3.jprs.jp
-[Signing Key]                   24907 8 2 (
-                                97C38581102DE3195FD3422F233891D6
-                                2F34748B1251F33A0DFCD39E9E4040DE )
-[Signing Key]                   24907 8 1 (
-                                BFF24889FE8B5A0C4F97D87059F94149
-                                A77D6672 )
+[Signing Key]                   1942 8 2 (
+                                0A6C515FAEF1D396F5E4726AF088A91F
+                                46622EFB124F0DFD24B342D0B7753E99 )
+[Signing Key]                   1942 8 1 (
+                                5A89908B95791E7F6A86A7E63AE218F8
+                                541A1F68 )
 
-[$BEPO?G/7nF|(B]                    2001/02/02
-[$BM-8z4|8B(B]                      2015/02/28
-[$B>uBV(B]                          Active
-[$B:G=*99?7(B]                      2014/03/01 01:05:11 (JST)
+[登録年月日]                    2001/02/02
+[有効期限]                      2016/02/29
+[状態]                          Active
+[最終更新]                      2015/03/01 01:05:10 (JST)
 
-Contact Information: [$B8x3+O"MmAk8}(B]
-[$BL>A0(B]                          $B3t<02q<RF|K\%l%8%9%H%j%5!<%S%9(B
+Contact Information: [公開連絡窓口]
+[名前]                          株式会社日本レジストリサービス
 [Name]                          Japan Registry Services Co.,Ltd.
 [Email]                         dom-admin@jprs.co.jp
 [Web Page]                       
-[$BM9JXHV9f(B]                      101-0065
-[$B=;=j(B]                          $BEl5~ET@iBeED6h@>?@ED;0CzL\(B8$BHV(B1$B9f(B
-                                $B@iBeED%U%!!<%9%H%S%kEl4[(B 13F
+[郵便番号]                      101-0065
+[住所]                          東京都千代田区西神田三丁目8番1号
+                                千代田ファーストビル東館 13F
 [Postal Address]                Chiyoda First Bldg. East 13F,
                                 3-8-1 Nishi-Kanda Chiyoda-ku,
                                 Tokyo 101-0065, JAPAN
-[$BEEOCHV9f(B]                      03-5215-8451
-[FAX$BHV9f(B]                       03-5215-8452
+[電話番号]                      03-5215-8451
+[FAX番号]                       03-5215-8452
 
