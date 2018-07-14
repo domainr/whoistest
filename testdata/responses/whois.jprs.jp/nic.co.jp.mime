@@ -1,0 +1,30 @@
+MIME-Version: 1.0
+Content-Checksum: 829a5b426946d754a136a52009e7aef27e209aa0
+Content-Length: 1157
+Content-Type: text/plain; charset=utf-8
+Fetched-At: 2018-07-14T17:55:14Z
+Host: whois.jprs.jp
+Query: nic.co.jp
+
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 NIC.CO.JP
+e. [そしきめい]                 かぶしきがいしゃえぬあいしー
+f. [組織名]                     株式会社NIC
+g. [Organization]               NIC Co.,Ltd.
+k. [組織種別]                   株式会社
+l. [Organization Type]          corporation
+m. [登録担当者]                 AH4927JP
+n. [技術連絡担当者]             TW68976JP
+p. [ネームサーバ]               uns01.lolipop.jp
+p. [ネームサーバ]               uns02.lolipop.jp
+s. [署名鍵]                     
+[状態]                          Connected (2018/11/30)
+[登録年月日]                    2010/11/01
+[接続年月日]                    2010/11/01
+[最終更新]                      2017/12/01 01:12:25 (JST)
+

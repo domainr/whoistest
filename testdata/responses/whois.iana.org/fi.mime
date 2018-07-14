@@ -1,0 +1,59 @@
+MIME-Version: 1.0
+Content-Checksum: 952570335dff1e4f1b72de4bc9dd47710d969fc8
+Content-Length: 1627
+Content-Type: text/plain; charset=windows-1252
+Fetched-At: 2018-07-14T17:54:53Z
+Host: whois.iana.org
+Query: fi
+
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FI
+
+organisation: Finnish Communications Regulatory Authority
+address:      PO Box 313
+address:      Helsinki  FI-00181
+address:      Finland
+
+contact:      administrative
+name:         Domain Names
+organisation: Finnish Communications Regulatory Authority
+address:      PO Box 313
+address:      Helsinki  FI-00181
+address:      Finland
+phone:        +358 295 390 200
+fax-no:       +358 295 390 270
+e-mail:       firootadmin@ficora.fi
+
+contact:      technical
+name:         Sami Salmensuo
+organisation: Finnish Communications Regulatory Authority
+address:      P.O. Box 313
+address:      Helsinki  FI-00181
+address:      Finland
+phone:        +358 295 390 200
+fax-no:       +358 295 390 270 
+e-mail:       firootadmin@ficora.fi
+
+nserver:      A.FI 193.166.4.1 2001:708:10:53:0:0:0:53
+nserver:      B.FI 194.146.106.26 2001:67c:1010:6:0:0:0:53
+nserver:      C.FI 194.0.11.104 2001:678:e:104:0:0:0:53
+nserver:      D.FI 2a01:3f0:0:302:0:0:0:53 77.72.229.253
+nserver:      E.FI 194.0.1.14 2001:678:4:0:0:0:0:e
+nserver:      F.FI 2a00:13f0:0:3:0:0:0:aaaa 87.239.127.198
+nserver:      G.FI 2001:500:14:6098:ad:0:0:1 204.61.216.98
+nserver:      H.FI 2001:678:a0:0:0:0:0:aaaa 87.239.120.11
+nserver:      I.FI 162.88.44.1 2600:2000:3008:0:0:0:0:1
+ds-rdata:     48592 8 2 8194468a0c3a0d49e2c9c038cffc79e7190401b454f3c15b12d2fb13de0d975b
+
+whois:        whois.fi
+
+status:       ACTIVE
+remarks:      Registration information: https://domain.fi
+
+created:      1986-12-17
+changed:      2017-04-26
+source:       IANA
+
