@@ -1,5 +1,3 @@
-// +build ignore
-
 package main
 
 import (
@@ -191,7 +189,7 @@ var whitespaceAndComments = regexp.MustCompile(`\s+|#.+$`)
 
 func readLines(fn string) ([]string, error) {
 	fmt.Fprintf(os.Stderr, "Reading %s\n", fn)
-	f, err := os.Open(filepath.Join(_dir, "data", fn))
+	f, err := os.Open(filepath.Join(_dir, "testdata", fn))
 	if err != nil {
 		return nil, err
 	}
