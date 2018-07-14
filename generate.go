@@ -77,7 +77,7 @@ func main1() error {
 		for _, prefix := range prefixes {
 			domain := prefix + "." + zone
 			domains[domain] = true
-			host, err := whois.Server(domain)
+			host, _, err := whois.Server(domain)
 			if err == nil {
 				parent := firstLabel.ReplaceAllLiteralString(host, "")
 				if _, ok := domains[parent]; !ok && parent != "" {
