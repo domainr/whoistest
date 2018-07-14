@@ -1,7 +1,5 @@
-// +build ignore
-
-// Enumerate unique keys from key/values found in the whois responses.
-// To use: go run enumerate.go
+// This command enumerates unique keys/values found in testdata/responses.
+// To use: go run cmd/enum/main.go
 
 package main
 
