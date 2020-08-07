@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 86762f3f861094e204adbc7a451dc3e3e03ced3b
-Content-Length: 473
+Content-Checksum: d9065b42c7654e2d956f0ada0ca258307712117d
+Content-Length: 368
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2015-04-29T01:31:43Z
+Fetched-At: 2020-08-07T16:16:26Z
 Host: whois.kr
 Query: zx5v7d4v2k50l3pq.kr
 
@@ -12,20 +12,16 @@ query : zx5v7d4v2k50l3pq.kr
 # KOREAN(UTF8)
 
 상기 도메인이름은 등록되어 있지 않습니다.
+상기 도메인이름의 사용을 원하실 경우 도메인이름 등록대행자를 통해 
+등록 신청하시기 바랍니다.
+
 
 
 # ENGLISH
 
-Above domain name is not registered to KRNIC.
+The requested domain was not found in the Registry or Registrar’s WHOIS Server.
 
 
-상기 정보는 UTF-8 인코딩되어 서비스되고 있습니다.
-EUC-KR 인코딩 서비스는 oldwhois.kisa.or.kr에서 서비스 되고 있습니다.
-The above information is encoded with UTF-8
-EUC-KR encoding WHOIS is being serviced in this URL:oldwhois.kisa.or.kr
 
-
-- KISA/KRNIC Whois Service -
-
-
+- KISA/KRNIC WHOIS Service -
 

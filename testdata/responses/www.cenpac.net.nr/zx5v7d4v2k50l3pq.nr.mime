@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 35ff432c8a57deb79d5c1eea1ebbaa7da2bf691e
+Content-Checksum: a220c445a9961eb54101cc4a64d664ec1680d421
 Content-Length: 5688
 Content-Type: text/html; charset=windows-1252
-Fetched-At: 2015-04-29T01:31:47Z
+Fetched-At: 2020-08-07T16:16:38Z
 Host: www.cenpac.net.nr
 Query: zx5v7d4v2k50l3pq.nr
 
@@ -161,7 +161,7 @@ function menuHide(e)
 
 <h1 align="center">.NR Whois</h1>
 <hr>
-<form method="GET" action="whois.html">Domain: <input type="text" size="20" name="subdomain" value="zx5v7d4v2k50l3pq" />&nbsp;.&nbsp;<select name="tld"><option value="info.nr" >info.nr</option><option value="net.nr" >net.nr</option><option value="org.nr" >org.nr</option><option value="biz.nr" >biz.nr</option><option value="com.nr" >com.nr</option><option value="nr" selected="selected">nr</option></select><input type="submit" value="Submit" name="whois"></p></form><hr>
+<form method="GET" action="whois.html">Domain: <input type="text" size="20" name="subdomain" value="zx5v7d4v2k50l3pq" />&nbsp;.&nbsp;<select name="tld"><option value="nr" selected="selected">nr</option><option value="biz.nr" >biz.nr</option><option value="info.nr" >info.nr</option><option value="com.nr" >com.nr</option><option value="net.nr" >net.nr</option><option value="org.nr" >org.nr</option></select><input type="submit" value="Submit" name="whois"></p></form><hr>
 </body>
 
 </html>

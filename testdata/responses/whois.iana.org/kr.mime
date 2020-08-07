@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 037b396e8791657d08175df0583a6bbfb520cbf9
-Content-Length: 1667
+Content-Checksum: 87b84d3b257185a585396a75c88fa7ac1cea0b48
+Content-Length: 1445
 Content-Type: text/plain; charset=windows-1252
-Fetched-At: 2015-04-29T01:31:42Z
+Fetched-At: 2020-08-07T16:16:24Z
 Host: whois.iana.org
 Query: kr
 
@@ -13,35 +13,34 @@ Query: kr
 domain:       KR
 
 organisation: Korea Internet & Security Agency (KISA)
-address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      9, Jinheung-gil, Naju-si, Jeollanam-do, 58324
 address:      Korea, Republic Of
 
 contact:      administrative
 name:         Kilnam Chon
 organisation: Korea Network Information Center (KRNIC)
-address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      9, Jinheung-gil, Naju-si, Jeollanam-do, 58324
 address:      Korea, Republic Of
 phone:        +82 10 8581 3514
-fax-no:       +82 2 405 5149
+fax-no:       +82 61 820 2611
 e-mail:       chonkn@gmail.com
 
 contact:      technical
-name:         Internet Address Technology Team Manager
+name:         KRNIC Tech Team Manager
 organisation: Korea Internet & Security Agency (KISA)
-address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      9, Jinheung-gil, Naju-si, Jeollanam-do, 58324
 address:      Korea, Republic Of
-phone:        +82 2 405 6612
-fax-no:       +82 2 405 5149
+phone:        +82 61 820 1161
+fax-no:       +82 61 820 2611
 e-mail:       techc@kisa.or.kr
 
-nserver:      B.DNS.KR 61.74.75.1
-nserver:      C.DNS.KR 203.248.246.220
-nserver:      D.DNS.KR 203.83.159.1
+nserver:      B.DNS.KR 210.101.60.1
+nserver:      C.DNS.KR 210.101.61.1
+nserver:      D.DNS.KR 2001:dcc:4:0:0:0:0:1 203.83.159.1
 nserver:      E.DNS.KR 2001:dcc:5:0:0:0:0:100 202.30.124.100
-nserver:      F.DNS.KR 218.38.181.90
+nserver:      F.DNS.KR 2001:dcc:6:0:0:0:0:1 210.101.62.1
 nserver:      G.DNS.KR 2001:dc5:a:0:0:0:0:1 202.31.190.1
-ds-rdata:     17625 7 2 FB939059F4B67BBA1E8AC37E35811E506488B2D8CFF807AF873B2116B5676B5C
-ds-rdata:     10746 7 2 A626C147CF76351B03CD26C03EBCC78C0DE48D87DD81F0919995824336236F96
+ds-rdata:     61615 8 2 ED570AADC88713CE2775FB8AFFB2AD782D056EA21D0677E147F2FB7BF54404DA
 
 whois:        whois.kr
 
@@ -49,6 +48,6 @@ status:       ACTIVE
 remarks:      Registration information: http://www.nic.or.kr/
 
 created:      1986-09-29
-changed:      2014-01-13
+changed:      2020-07-16
 source:       IANA
 

@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 10e2fadbb21195ade6e16322c866cc74397a8e1c
-Content-Length: 2045
+Content-Checksum: 491752ebfff56b6888e63f7f133822c6822e8b14
+Content-Length: 1890
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2018-07-14T17:55:09Z
+Fetched-At: 2020-08-07T16:16:25Z
 Host: whois.jprs.jp
 Query: jprs.jp
 
@@ -21,17 +21,14 @@ Domain Information: [ドメイン情報]
 [Name Server]                   ns2.jprs.jp
 [Name Server]                   ns3.jprs.jp
 [Name Server]                   ns4.jprs.jp
-[Signing Key]                   47911 8 2 (
-                                8156BE0D101EBBC0E0F4D0B2AC061BB9
-                                BC8045D1845D943337FDB1F93FCC53E3 )
-[Signing Key]                   47911 8 1 (
-                                62D2FCBEE20DC0F6A5184FEE47F09C71
-                                71B5CC15 )
+[Signing Key]                   43519 8 2 (
+                                F1253DCC0CEE00CFB6518894AD23F135
+                                E1801D67D67D9CCDA81AADA9954109DC )
 
 [登録年月日]                    2001/02/02
-[有効期限]                      2019/02/28
+[有効期限]                      2021/02/28
 [状態]                          Active
-[最終更新]                      2018/04/03 17:47:06 (JST)
+[最終更新]                      2020/03/17 16:55:04 (JST)
 
 Contact Information: [公開連絡窓口]
 [名前]                          株式会社日本レジストリサービス

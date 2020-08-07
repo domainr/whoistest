@@ -1,111 +1,63 @@
 MIME-Version: 1.0
-Content-Checksum: 4bf75199e90134f3e154dfac1266b7719365272f
-Content-Length: 4497
+Content-Checksum: 85dcd68a5efafdc83102a2e70496f5318444d4bb
+Content-Length: 3219
 Content-Type: text/plain; charset=iso-8859-1
-Fetched-At: 2015-04-29T01:31:43Z
+Fetched-At: 2020-08-07T16:16:26Z
 Host: whois.verisign-grs.com
 Query: nic.net
 
-
-Whois Server Version 2.0
-
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
-
-   Server Name: NIC.NET.UKY.EDU
-   IP Address: 128.163.3.10
-   Registrar: EDUCAUSE
-   Whois Server: whois.educause.net
-   Referral URL: http://www.educause.edu/edudomain
-
-   Server Name: NIC.NETDIRECT.CA
-   Registrar: NETWORK SOLUTIONS, LLC.
-   Whois Server: whois.networksolutions.com
-   Referral URL: http://networksolutions.com
-
-   Server Name: NIC.NETENTERTAINMENT.COM
-   IP Address: 193.15.85.125
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: NIC.NETGROUP.NET
-   IP Address: 209.176.76.65
-   Registrar: TUCOWS DOMAINS INC.
-   Whois Server: whois.tucows.com
-   Referral URL: http://www.tucowsdomains.com
-
-   Server Name: NIC.NETIMAGING.COM
-   IP Address: 66.180.10.220
-   Registrar: UNIREGISTRAR CORP
-   Whois Server: whois.uniregistrar.com
-   Referral URL: http://www.uniregistrar.com
-
-   Server Name: NIC.NETRUS.SE
-   Registrar: NETWORK SOLUTIONS, LLC.
-   Whois Server: whois.networksolutions.com
-   Referral URL: http://networksolutions.com
-
-   Server Name: NIC.NETSOL.SE
-   Registrar: DOMAININFO AB D/B/A DOMAININFO.COM
-   Whois Server: whois.domaininfo.com
-   Referral URL: http://www.domaininfo.com
-
-   Server Name: NIC.NETWEB.COM.MX
-   Registrar: NETWORK SOLUTIONS, LLC.
-   Whois Server: whois.networksolutions.com
-   Referral URL: http://networksolutions.com
-
    Domain Name: NIC.NET
-   Registrar: DOMAIN.COM, LLC
-   Sponsoring Registrar IANA ID: 886
-   Whois Server: whois.domain.com
-   Referral URL: http://www.domain.com
+   Registry Domain ID: 2707346_DOMAIN_NET-VRSN
+   Registrar WHOIS Server: whois.domain.com
+   Registrar URL: http://www.domain.com
+   Updated Date: 2019-09-23T03:47:20Z
+   Creation Date: 1996-10-23T04:00:00Z
+   Registry Expiry Date: 2020-10-22T04:00:00Z
+   Registrar: Domain.com, LLC
+   Registrar IANA ID: 886
+   Registrar Abuse Contact Email: compliance@domain-inc.net
+   Registrar Abuse Contact Phone: 602-226-2389
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
    Name Server: DNS1.DOMAINBANK.COM
    Name Server: DNS2.DOMAINBANK.COM
-   Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
-   Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
-   Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
-   Updated Date: 07-oct-2014
-   Creation Date: 23-oct-1996
-   Expiration Date: 22-oct-2015
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2020-08-07T16:16:10Z <<<
 
->>> Last update of whois database: Wed, 29 Apr 2015 01:31:25 GMT <<<
+For more information on Whois status codes, please visit https://icann.org/epp
 
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
 view the registrar's reported date of expiration for this registration.
 
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
 
 The Registry database contains ONLY .COM, .NET, .EDU domains and
 Registrars.
-
-For more information on Whois status codes, please visit 
-https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

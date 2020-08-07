@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: 08aee8224b796a41432a6c433adfc0256349fb05
-Content-Length: 2066
+Content-Checksum: 480385aaceaf58484dc671285bb18038ba2699a6
+Content-Length: 1790
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2015-04-29T01:31:43Z
+Fetched-At: 2020-08-07T16:16:26Z
 Host: whois.kr
 Query: google.kr
 
@@ -20,7 +20,7 @@ query : google.kr
 책임자 전화번호             : 82.25319000
 등록일                      : 2007. 03. 02.
 최근 정보 변경일            : 2010. 10. 04.
-사용 종료일                 : 2016. 03. 02.
+사용 종료일                 : 2021. 03. 02.
 정보공개여부                : Y
 등록대행자                  : (주)후이즈(http://whois.co.kr)
 DNSSEC                      : 미서명
@@ -45,7 +45,7 @@ AC E-Mail                   : dns-admin@google.com
 AC Phone Number             : 82.25319000
 Registered Date             : 2007. 03. 02.
 Last Updated Date           : 2010. 10. 04.
-Expiration Date             : 2016. 03. 02.
+Expiration Date             : 2021. 03. 02.
 Publishes                   : Y
 Authorized Agency           : Whois Corp.(http://whois.co.kr)
 DNSSEC                      : unsigned
@@ -57,13 +57,5 @@ Secondary Name Server
    Host Name                : ns2.google.com
 
 
-상기 정보는 UTF-8 인코딩되어 서비스되고 있습니다.
-EUC-KR 인코딩 서비스는 oldwhois.kisa.or.kr에서 서비스 되고 있습니다.
-The above information is encoded with UTF-8
-EUC-KR encoding WHOIS is being serviced in this URL:oldwhois.kisa.or.kr
-
-
-- KISA/KRNIC Whois Service -
-
-
+- KISA/KRNIC WHOIS Service -
 

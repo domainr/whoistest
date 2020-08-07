@@ -1,8 +1,8 @@
 MIME-Version: 1.0
-Content-Checksum: e95c23d60a7c7993b457a5be9c47d8cc2347d6a4
-Content-Length: 477
+Content-Checksum: 7cf23eec3b8010341c8ff3fe9ba23affc6112ecc
+Content-Length: 366
 Content-Type: text/plain; charset=utf-8
-Fetched-At: 2015-04-29T01:31:42Z
+Fetched-At: 2020-08-07T16:16:25Z
 Host: whois.kr
 Query: nic.kr
 
@@ -11,21 +11,14 @@ query : nic.kr
 
 # KOREAN(UTF8)
 
-상기 도메인이름은 현재 등록이 제한되어 있습니다.
+상기 도메인이름은 도메인이름의 안정적 관리와 공공의 이익 등을 위하여 
+등록자격이 제한된 도메인이름입니다.
 
 
 # ENGLISH
 
-Above domain name is not available for registration.
+This request domain name is restricted to specifically qualified registrants for stable management of domain names and public interest.
 
 
-상기 정보는 UTF-8 인코딩되어 서비스되고 있습니다.
-EUC-KR 인코딩 서비스는 oldwhois.kisa.or.kr에서 서비스 되고 있습니다.
-The above information is encoded with UTF-8
-EUC-KR encoding WHOIS is being serviced in this URL:oldwhois.kisa.or.kr
-
-
-- KISA/KRNIC Whois Service -
-
-
+- KISA/KRNIC WHOIS Service -
 

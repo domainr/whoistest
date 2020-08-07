@@ -1,92 +1,40 @@
 MIME-Version: 1.0
-Content-Checksum: 52ac4f96791db413b07e85762bbccc08f2e07716
-Content-Length: 3845
-Content-Type: text/plain; charset=windows-1252
-Fetched-At: 2015-04-29T01:31:42Z
+Content-Checksum: c2fe42e5cdba6769edd5df469779f65391240535
+Content-Length: 2596
+Content-Type: text/plain; charset=iso-8859-1
+Fetched-At: 2020-08-07T16:16:25Z
 Host: whois.pir.org
 Query: pir.org
 
-Domain Name:PIR.ORG
-Domain ID: D96207-LROR
+Domain Name: PIR.ORG
+Registry Domain ID: D96207-LROR
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.whois.godaddy.com
+Updated Date: 2020-02-20T01:32:24Z
 Creation Date: 1996-02-18T05:00:00Z
-Updated Date: 2015-02-20T01:41:55Z
-Registry Expiry Date: 2016-02-19T05:00:00Z
-Sponsoring Registrar:GoDaddy.com, LLC (R91-LROR)
-Sponsoring Registrar IANA ID: 146
-WHOIS Server: 
-Referral URL: 
-Domain Status: serverDeleteProhibited -- http://www.icann.org/epp#serverDeleteProhibited
-Domain Status: serverTransferProhibited -- http://www.icann.org/epp#serverTransferProhibited
-Domain Status: serverUpdateProhibited -- http://www.icann.org/epp#serverUpdateProhibited
-Registrant ID:GODA-02131674
-Registrant Name:Registration Private
-Registrant Organization:Domains By Proxy, LLC
-Registrant Street: DomainsByProxy.com
-Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Registrant City:Scottsdale
-Registrant State/Province:Arizona
-Registrant Postal Code:85260
-Registrant Country:US
-Registrant Phone:+1.4806242599
-Registrant Phone Ext: 
-Registrant Fax: +1.4806242598
-Registrant Fax Ext: 
-Registrant Email:PIR.ORG@domainsbyproxy.com
-Admin ID:GODA-22131674
-Admin Name:Registration Private
-Admin Organization:Domains By Proxy, LLC
-Admin Street: DomainsByProxy.com
-Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Admin City:Scottsdale
-Admin State/Province:Arizona
-Admin Postal Code:85260
-Admin Country:US
-Admin Phone:+1.4806242599
-Admin Phone Ext: 
-Admin Fax: +1.4806242598
-Admin Fax Ext: 
-Admin Email:PIR.ORG@domainsbyproxy.com
-Tech ID:GODA-12131674
-Tech Name:Registration Private
-Tech Organization:Domains By Proxy, LLC
-Tech Street: DomainsByProxy.com
-Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Tech City:Scottsdale
-Tech State/Province:Arizona
-Tech Postal Code:85260
-Tech Country:US
-Tech Phone:+1.4806242599
-Tech Phone Ext: 
-Tech Fax: +1.4806242598
-Tech Fax Ext: 
-Tech Email:PIR.ORG@domainsbyproxy.com
-Name Server:NS1.AMS1.AFILIAS-NST.INFO
-Name Server:NS1.MIA1.AFILIAS-NST.INFO
-Name Server:NS1.SEA1.AFILIAS-NST.INFO
-Name Server:NS1.YYZ1.AFILIAS-NST.INFO
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-DNSSEC:signedDelegation
-DS Created 1:2010-03-26T16:52:50Z
-DS Key Tag 1:54135
-Algorithm 1:5
-Digest Type 1:1
-Digest 1:225F055ACB65C8B60AD18B3640062E8C23A5FD89
-DS Maximum Signature Life 1:1814400 seconds
-DS Created 2:2010-03-26T16:53:27Z
-DS Key Tag 2:54135
-Algorithm 2:5
-Digest Type 2:2
-Digest 2:6CDE2DE97F1D07B23134440F19682E7519ADDAE180E20B1B1EC52E7F58B2831D
-DS Maximum Signature Life 2:1814400 seconds
+Registry Expiry Date: 2021-02-19T05:00:00Z
+Registrar Registration Expiration Date:
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Reseller:
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Registrant Organization: Domains By Proxy, LLC
+Registrant State/Province: Arizona
+Registrant Country: US
+Name Server: NS1.AMS1.AFILIAS-NST.INFO
+Name Server: NS1.MIA1.AFILIAS-NST.INFO
+Name Server: NS1.SEA1.AFILIAS-NST.INFO
+Name Server: NS1.YYZ1.AFILIAS-NST.INFO
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form https://www.icann.org/wicf/)
+>>> Last update of WHOIS database: 2020-08-07T16:15:25Z <<<
 
-Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy. For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+For more information on Whois status codes, please visit https://icann.org/epp
 
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
 
+The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
