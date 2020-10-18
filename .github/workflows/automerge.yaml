@@ -1,35 +1,23 @@
 name: Automerge
 
-# Enable while working on this file
-on:
-  push:
-    paths: 
-      - "automerge.yaml"
-
-# Enable to automerge the daily data updates
+# Testing: enable while working on this file
 # on:
-#   pull_request:
-#     types:
-#       - labeled
-#   check_suite:
-#     types:
-#       - completed
+#   push:
+#     paths: 
+#       - "automerge.yaml"
+
+# Prod: enable to automerge the daily data updates
+on:
+  pull_request:
+  check_suite:
+    types:
+      - completed
 
 jobs:
   automerge:
     runs-on: ubuntu-latest
-# Approach #1, via pascalgn/automerge-action
-#     steps:
-#       - name: automerge
-#         uses: pascalgn/automerge-action@v0.9.0
-#         env:
-#           # FIXME: This probably needs to be a Personal Access Token
-#           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-#           MERGE_FILTER_AUTHOR: "dependabot" # Restrict automerge to the "dependabot" user
-#           MERGE_FORKS: false
-#           MERGE_DELETE_BRANCH: true
 
-# Approach #2, via https://github.com/dependabot/dependabot-core/issues/1973#issuecomment-701889737
+    # Via: https://github.com/dependabot/dependabot-core/issues/1973#issuecomment-701889737
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: automerge
