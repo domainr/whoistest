@@ -1,0 +1,38 @@
+name: Automerge
+
+# Testing: enable while working on this file
+# on:
+#   push:
+#     paths: 
+#       - "automerge.yaml"
+
+# Prod: enable to automerge the daily data updates
+on:
+  pull_request:
+  check_suite:
+    types:
+      - completed
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+
+    # Via: https://github.com/dependabot/dependabot-core/issues/1973#issuecomment-701889737
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: automerge
+        uses: actions/github-script@v3
+        with:
+          script: |
+            github.pullRequests.createReview({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number,
+              event: 'APPROVE'
+            })
+            github.pullRequests.merge({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number
+            })
+          github-token: ${{ secrets.GITHUB_TOKEN }}
