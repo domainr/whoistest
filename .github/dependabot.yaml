@@ -10,5 +10,5 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-      time: "02:00" # After github.com/zonedb/zonedb
+      time: "10:00" # After github.com/zonedb/zonedb
     open-pull-requests-limit: 10
