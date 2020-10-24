@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test Go
+    name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -31,14 +31,13 @@ jobs:
       - name: Verify repo is unchanged
         run: git diff --exit-code HEAD
 
-  # Via: https://github.com/dependabot/dependabot-core/issues/1973#issuecomment-701889737
-  automerge:
-    name: Automerge
+  review:
+    name: Review pull request
     needs: test
-    if: github.actor == 'dependabot[bot]'
+    if: startsWith(github.head_ref, 'dependabot/go_modules/github.com/zonedb/zonedb')
     runs-on: ubuntu-latest
     steps:
-      - name: automerge
+      - name: Approve pull request
         uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.DOMAINRBOT_RW_GITHUB_ACCESS_TOKEN }}
@@ -48,9 +47,4 @@ jobs:
               repo: context.payload.repository.name,
               pull_number: context.payload.pull_request.number,
               event: 'APPROVE'
-            })
-            github.pulls.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number
             })
