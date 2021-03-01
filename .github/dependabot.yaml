@@ -4,11 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+      time: "13:00"
     open-pull-requests-limit: 10
 
   - package-ecosystem: gomod
     directory: "/"
     schedule:
       interval: weekly
-      time: "10:00" # After github.com/zonedb/zonedb
+      time: "10:00" # 2am Pacific, after github.com/zonedb/zonedb
     open-pull-requests-limit: 10
