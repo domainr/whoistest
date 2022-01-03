@@ -7,6 +7,6 @@ require (
 	github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/wsxiaoys/terminal v0.0.0-20160513160801-0940f3fc43a0
-	github.com/zonedb/zonedb v1.0.3493
+	github.com/zonedb/zonedb v1.0.3500
 	golang.org/x/net v0.0.0-20210916014120-12bc252f5db8
 )
