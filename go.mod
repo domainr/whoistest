@@ -1,8 +1,6 @@
 module github.com/domainr/whoistest
 
-go 1.21
-
-toolchain go1.21.1
+go 1.22
 
 require (
 	github.com/domainr/whois v0.1.0
@@ -15,6 +13,6 @@ require (
 require (
 	github.com/PuerkitoBio/goquery v1.9.2 // indirect
 	github.com/andybalholm/cascadia v1.3.2 // indirect
-	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
+	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	golang.org/x/text v0.16.0 // indirect
 )
