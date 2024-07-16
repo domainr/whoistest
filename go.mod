@@ -1,6 +1,8 @@
 module github.com/domainr/whoistest
 
-go 1.22
+go 1.21
+
+toolchain go1.22
 
 require (
 	github.com/domainr/whois v0.1.0
